@@ -6,7 +6,18 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Farm Botanica`,
+    description: `A young export firm from Chennai`,
+    author: `Agasthian`,
+    siteUrl: "https://www.farmbotanica.in/",
+    social: {
+      facebook: "StackedBoxes",
+      email: "stackedboxes@stackedboxes.in",
+    },
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

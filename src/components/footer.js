@@ -3,7 +3,9 @@ import React from "react"
 const Footer = () => {
   return (
     <div>
-      <p>Created by Agasthian , copywight 2020</p>
+      <p>
+        Built by Agasthian Rathinavel , <span role="img">©️</span> 2020
+      </p>
     </div>
   )
 }
