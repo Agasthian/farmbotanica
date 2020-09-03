@@ -2,7 +2,7 @@ import React from "react"
 import { useSpring, animated, config } from "react-spring"
 import styled from "styled-components"
 
-import { Container } from "../../themes/utils"
+import { Container, CenterAlign } from "../../themes/utils"
 
 const Section = styled.section`
   position: relative;
@@ -16,6 +16,7 @@ const Content = styled.div`
   position: absolute;
   color: #fff;
   z-index: 1;
+  text-align: center;
 `
 
 const MainHeading = styled(animated.h1)`
@@ -29,6 +30,12 @@ const SubHeading = styled(animated.h2)`
   color: var(--secondary);
   font-weight: 600;
   font-size: 1.8rem;
+`
+const SubHeading2 = styled(animated.h2)`
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-transform: uppercase;
 `
 
 const HomeLanding = () => {
@@ -59,12 +66,17 @@ const HomeLanding = () => {
     <>
       <Section>
         <Container>
-          <Content>
-            <MainHeading style={MainHeadingSpring}>Farm Botanica</MainHeading>
-            <SubHeading style={SubHeadingSpring}>
-              Shipping Greens all over the Globe
-            </SubHeading>
-          </Content>
+          <CenterAlign>
+            <Content>
+              <MainHeading style={MainHeadingSpring}>Farm Botanica</MainHeading>
+              <SubHeading style={SubHeadingSpring}>
+                Shipping Greens all over the Globe
+              </SubHeading>
+              <SubHeading2 style={SubHeadingSpring}>
+                Website under Construction
+              </SubHeading2>
+            </Content>
+          </CenterAlign>
         </Container>
       </Section>
     </>
