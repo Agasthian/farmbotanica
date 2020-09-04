@@ -27,7 +27,7 @@ const NavItems = ({ mobile }) => {
   return (
     <StyledNav mobile={mobile}>
       <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/about">About Us</StyledLink>
+      {/* <StyledLink to="/about">About Us</StyledLink> */}
       <StyledLink to="/contact">Contact us</StyledLink>
     </StyledNav>
   )

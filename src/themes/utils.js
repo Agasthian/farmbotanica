@@ -11,3 +11,11 @@ export const CenterAlign = styled.div`
   display: flex;
   justify-content: center;
 `
+// Top Start of site
+export const Content = styled.div`
+  margin-top: 10rem;
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+`

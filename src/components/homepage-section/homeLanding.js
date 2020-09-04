@@ -2,21 +2,14 @@ import React from "react"
 import { useSpring, animated, config } from "react-spring"
 import styled from "styled-components"
 
-import { Container, CenterAlign } from "../../themes/utils"
+import { Container, CenterAlign, Content } from "../../themes/utils"
+import ComingSoon from "../../images/coming-soon.svg"
 
 const Section = styled.section`
   position: relative;
   height: 100vh;
   background-size: cover;
   background-position: center;
-`
-
-const Content = styled.div`
-  margin-top: 19rem;
-  position: absolute;
-  color: #fff;
-  z-index: 1;
-  text-align: center;
 `
 
 const MainHeading = styled(animated.h1)`
@@ -62,6 +55,11 @@ const HomeLanding = () => {
     },
   })
 
+  const Svg = styled.img`
+    max-width: 100%;
+    height: 25em;
+  `
+
   return (
     <>
       <Section>
@@ -75,6 +73,7 @@ const HomeLanding = () => {
               <SubHeading2 style={SubHeadingSpring}>
                 Website under Construction
               </SubHeading2>
+              <Svg src={ComingSoon} />
             </Content>
           </CenterAlign>
         </Container>
