@@ -3,15 +3,15 @@ import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout"
 
-const AboutPage = () => {
+const Categorypage = () => {
   return (
     <div>
-      <Head title="About Us" />
+      <Head title="Category Page" />
       <Layout>
-        <h1>About Us</h1>
+        <h2>Category</h2>
       </Layout>
     </div>
   )
 }
 
-export default AboutPage
+export default Categorypage

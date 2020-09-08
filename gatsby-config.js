@@ -12,15 +12,15 @@ module.exports = {
     author: `Agasthian`,
     siteUrl: "https://www.farmbotanica.in/",
     social: {
-      facebook: "StackedBoxes",
-      email: "stackedboxes@stackedboxes.in",
+      skypeID: "farmbotanica",
+      email: "support@farmbotanica.com",
     },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`,
+        name: `products`,
+        path: `${__dirname}/src/products`,
       },
     },
     {
@@ -46,6 +46,9 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.js"),
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -54,6 +57,12 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/products`,
       },
     },
     {

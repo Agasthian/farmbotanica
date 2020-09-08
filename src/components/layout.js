@@ -1,7 +1,7 @@
 import React from "react"
 
 import Navbar from "./navigation/navbar"
-import Footer from "../components/footer"
+import Footer from "./footer/footer"
 
 const Layout = props => {
   return (

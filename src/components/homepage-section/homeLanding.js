@@ -1,7 +1,10 @@
 import React from "react"
-import { useSpring, animated, config } from "react-spring"
 import styled from "styled-components"
+import { Link } from "gatsby"
+import { useSpring, animated, config } from "react-spring"
 
+import BackgroundLogo from "../UI/backgroundLogo"
+import Button from "../UI/button"
 import { Container } from "../../themes/utils"
 
 const Section = styled.section`
@@ -13,9 +16,12 @@ const Section = styled.section`
 
 const Content = styled.div`
   margin-top: 19rem;
-  position: absolute;
-  color: #fff;
-  z-index: 1;
+`
+//warap - flex box
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `
 
 const MainHeading = styled(animated.h1)`
@@ -55,16 +61,33 @@ const HomeLanding = () => {
     },
   })
 
+  const ButtonSpring = useSpring({
+    config: config.slow,
+    delay: 900,
+    opacity: 1,
+    transform: "translateY(0px)",
+    from: {
+      opacity: 0,
+      transform: "translateY(70px)",
+    },
+  })
+
   return (
     <>
       <Section>
         <Container>
-          <Content>
-            <MainHeading style={MainHeadingSpring}>Farm Botanica</MainHeading>
-            <SubHeading style={SubHeadingSpring}>
-              Shipping Greens all over the Globe
-            </SubHeading>
-          </Content>
+          <MainWrapper>
+            <Content>
+              <MainHeading style={MainHeadingSpring}>Farm Botanica</MainHeading>
+              <SubHeading style={SubHeadingSpring}>
+                Shipping Greens all over the Globe
+              </SubHeading>
+              <Link to="/category_page">
+                <Button style={ButtonSpring}>View Product Category</Button>
+              </Link>
+            </Content>
+            <BackgroundLogo />
+          </MainWrapper>
         </Container>
       </Section>
     </>
