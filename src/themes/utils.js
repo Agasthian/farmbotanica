@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 100%;
 `
+
 //Center Align Content
 export const CenterAlign = styled.div`
   display: flex;

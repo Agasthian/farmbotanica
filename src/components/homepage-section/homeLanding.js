@@ -3,25 +3,20 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { useSpring, animated, config } from "react-spring"
 
+import { Section, Container, Wrapper } from "../layout/element"
 import BackgroundLogo from "../UI/backgroundLogo"
 import Button from "../UI/button"
-import { Container } from "../../themes/utils"
 
-const Section = styled.section`
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-`
-
-const Content = styled.div`
-  margin-top: 19rem;
-`
 //warap - flex box
-const MainWrapper = styled.div`
+const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+`
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const MainHeading = styled(animated.h1)`
@@ -74,20 +69,24 @@ const HomeLanding = () => {
 
   return (
     <>
-      <Section>
+      <Section id="header" fullHeight>
         <Container>
-          <MainWrapper>
-            <Content>
-              <MainHeading style={MainHeadingSpring}>Farm Botanica</MainHeading>
-              <SubHeading style={SubHeadingSpring}>
-                Shipping Greens all over the Globe
-              </SubHeading>
-              <Link to="/category_page">
-                <Button style={ButtonSpring}>View Product Category</Button>
-              </Link>
-            </Content>
-            <BackgroundLogo />
-          </MainWrapper>
+          <Wrapper>
+            <FlexWrapper>
+              <Content>
+                <MainHeading style={MainHeadingSpring}>
+                  Farm Botanica
+                </MainHeading>
+                <SubHeading style={SubHeadingSpring}>
+                  Shipping Greens all over the Globe
+                </SubHeading>
+                <Link to="/category_page">
+                  <Button style={ButtonSpring}>View Product Category</Button>
+                </Link>
+              </Content>
+              <BackgroundLogo />
+            </FlexWrapper>
+          </Wrapper>
         </Container>
       </Section>
     </>

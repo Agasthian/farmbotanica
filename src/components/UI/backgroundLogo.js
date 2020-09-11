@@ -5,9 +5,17 @@ import heroImg from "../../images/hero_img.svg"
 import styled from "styled-components"
 
 const StyledImage = styled.img`
-  margin-top: 7rem;
-  height: 50rem;
   width: 60rem;
+
+  @media ${props => props.theme.mediaQueries.larger} {
+    width: 55rem;
+  }
+  @media ${props => props.theme.mediaQueries.large} {
+    width: 50rem;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    width: 45rem;
+  }
 `
 
 const BackgroundLogo = () => {
