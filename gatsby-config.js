@@ -32,7 +32,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `products`,
-        path: `${__dirname}/src/products`,
+        path: `${__dirname}/src/content/products`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `category`,
+        path: `${__dirname}/src/content/category`,
       },
     },
     {
@@ -62,7 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `${__dirname}/src/products`,
+        path: `${__dirname}/src/content/products`,
       },
     },
     {
@@ -70,7 +77,7 @@ module.exports = {
       options: {
         fonts: [
           `poppins`,
-          `open sans`, // you can also specify font weights and styles
+          `open sans\:400,700`, // you can also specify font weights and styles
         ],
         display: "swap",
       },

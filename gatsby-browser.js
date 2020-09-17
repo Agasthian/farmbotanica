@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     font-size:62.5%; //1rem=10px
     box-sizing:border-box;
     line-height:1.15;
+    scroll-behavior: smooth;
     
     @media ${props => props.theme.mediaQueries.large} {
       font-size: 60%;
@@ -46,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary: ${props => props.theme.colors.main2};
     --navbar: rgba(255, 255, 255, 0.95);
     --text: ${props => props.theme.colors.dark1};
+    --light-text:${props => props.theme.colors.light1};
     --white: #fff;
     --shadow-btn: rgba(7, 49, 69, .1);
     --shadow-color: rgba(0, 0, 0, 0.1);

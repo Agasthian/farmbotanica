@@ -33,7 +33,7 @@ const About = () => {
   `)
 
   return (
-    <Section fullHeight id="about">
+    <Section fullHeight id="about" style={{ backgroundColor: "white" }}>
       <Container>
         <FlexWrapper>
           <AboutImg

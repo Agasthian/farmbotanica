@@ -12,3 +12,10 @@ export const CenterAlign = styled.div`
   display: flex;
   justify-content: center;
 `
+
+// Sub Heading
+export const SubHeading = styled.h2`
+  font-size: 2rem;
+  color: var(--secondary);
+  text-trannsform: uppercase;
+`

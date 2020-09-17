@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout"
 import Head from "../components/head"
 import HomeLanding from "../components/homepage-section/homeLanding"
 import About from "../components/homepage-section/aboutSection"
+import Category from "../components/homepage-section/categorySection"
 
 const IndexPage = () => {
   return (
@@ -11,7 +12,8 @@ const IndexPage = () => {
       <Layout>
         <Head title="Home" />
         <HomeLanding />
-        <About /> 
+        <About />
+        <Category />
       </Layout>
     </div>
   )
