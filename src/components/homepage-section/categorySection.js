@@ -1,20 +1,21 @@
 import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+
 
 import CategoryCard from "../UI/categoryCard"
 import { Section, Container } from "../layout/element"
 import { SubHeading, CenterAlign } from "../../themes/utils"
 
+const CategoryWrapper = styled.div`
+margin-top: 8rem;
+`;
+
 const CardWrapper = styled.div`
-  display: flex;
+  margin-top:2rem;
+  display:flex;
   flex-direction: row;
   justify-content: space-between;
-`
-const StyledImg = styled(Img)`
-  height: 20rem;
-  width: 20rem;
 `
 
 const CategorySection = () => {
@@ -43,16 +44,18 @@ const CategorySection = () => {
   `)
 
   return (
-    <Section>
+    <Section fullHeight >
       <Container>
-        <CenterAlign>
-          <SubHeading>Product Category</SubHeading>
-        </CenterAlign>
-        <CardWrapper>
-          {data.allMdx.edges.map(item => (
-            <CategoryCard key={item.node.id} cardinfo={item.node} />
-          ))}
-        </CardWrapper>
+        <CategoryWrapper>
+          <CenterAlign>
+            <SubHeading>Product Category</SubHeading>
+          </CenterAlign>
+          <CardWrapper>
+            {data.allMdx.edges.map(item => (
+              <CategoryCard key={item.node.id} cardinfo={item.node} />
+            ))}
+          </CardWrapper>
+        </CategoryWrapper>
       </Container>
     </Section>
   )

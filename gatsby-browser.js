@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
   
   body{
     font-family: ${props => props.theme.fonts.para};
-    font-size:1.4rem;
+    font-size:1.6rem;
     margin: 0;
     width: 100%;
     height: 100%;

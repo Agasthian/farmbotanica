@@ -15,7 +15,11 @@ export const CenterAlign = styled.div`
 
 // Sub Heading
 export const SubHeading = styled.h2`
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: var(--secondary);
-  text-trannsform: uppercase;
 `
+
+export const SubHeadingH4 = styled.h4`
+  color: var(--secondary);
+  
+`;

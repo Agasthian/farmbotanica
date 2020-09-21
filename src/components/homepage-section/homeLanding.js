@@ -29,7 +29,8 @@ const MainHeading = styled(animated.h1)`
 const SubHeading = styled(animated.h2)`
   color: var(--secondary);
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 4.2rem;
 `
 
 const HomeLanding = () => {
@@ -69,7 +70,7 @@ const HomeLanding = () => {
 
   return (
     <>
-      <Section id="header" fullHeight>
+      <Section id="header" fullHeight center>
         <Container>
           <Wrapper>
             <FlexWrapper>

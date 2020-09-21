@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import { Section, Container } from "../layout/element"
 import StyledButton from "../UI/button"
+import {SubHeading} from '../../themes/utils'
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ const About = () => {
   `)
 
   return (
-    <Section fullHeight id="about" style={{ backgroundColor: "white" }}>
+    <Section fullHeight center id="about" style={{ backgroundColor: "white" }}>
       <Container>
         <FlexWrapper>
           <AboutImg
@@ -41,7 +42,7 @@ const About = () => {
             alt="About Process"
           />
           <AboutTextWrapper>
-            <h1>About Us</h1>
+            <SubHeading>About Us</SubHeading>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
               illum repellat ratione quos nisi magni dignissimos placeat enim
