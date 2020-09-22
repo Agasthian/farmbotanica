@@ -20,6 +20,9 @@ export const SubHeading = styled.h2`
 `
 
 export const SubHeadingH4 = styled.h4`
-  color: var(--secondary);
-  
-`;
+  color: var(--white);
+`
+
+export const SubHeadingH6 = styled.h6`
+  color: var(--white);
+`
