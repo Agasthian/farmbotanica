@@ -1,13 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import { useSpring, animated, config } from "react-spring"
 
+import ScrollDown from "../UI/scrollDown"
 import { Section, Container, Wrapper } from "../layout/element"
 import BackgroundLogo from "../UI/backgroundLogo"
 import Button from "../UI/button"
 
-//warap - flex box
+//wrap - flex box
 const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -31,6 +34,10 @@ const SubHeading = styled(animated.h2)`
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 4.2rem;
+`
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  margin-left: 1rem;
 `
 
 const HomeLanding = () => {
@@ -82,12 +89,16 @@ const HomeLanding = () => {
                   Shipping Greens all over the Globe
                 </SubHeading>
                 <Link to="/category_page">
-                  <Button style={ButtonSpring}>View Product Category</Button>
+                  <Button style={ButtonSpring}>
+                    View Product Category
+                    <StyledIcon icon={faArrowCircleRight} size="1x" />
+                  </Button>
                 </Link>
               </Content>
               <BackgroundLogo />
             </FlexWrapper>
           </Wrapper>
+          <ScrollDown />
         </Container>
       </Section>
     </>

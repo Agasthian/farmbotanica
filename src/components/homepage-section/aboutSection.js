@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 import { Section, Container } from "../layout/element"
 import StyledButton from "../UI/button"
-import {SubHeading} from '../../themes/utils'
+import { SubHeading } from "../../themes/utils"
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -34,7 +34,12 @@ const About = () => {
   `)
 
   return (
-    <Section fullHeight center id="about" style={{ backgroundColor: "white" }}>
+    <Section
+      id="about-me"
+      fullHeight
+      center
+      style={{ backgroundColor: "white" }}
+    >
       <Container>
         <FlexWrapper>
           <AboutImg

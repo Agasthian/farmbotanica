@@ -2,18 +2,17 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-
 import CategoryCard from "../UI/categoryCard"
 import { Section, Container } from "../layout/element"
 import { SubHeading, CenterAlign } from "../../themes/utils"
 
 const CategoryWrapper = styled.div`
-margin-top: 8rem;
-`;
+  margin-top: 8rem;
+`
 
 const CardWrapper = styled.div`
-  margin-top:2rem;
-  display:flex;
+  margin-top: 2rem;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 `
@@ -44,7 +43,7 @@ const CategorySection = () => {
   `)
 
   return (
-    <Section fullHeight >
+    <Section fullHeight>
       <Container>
         <CategoryWrapper>
           <CenterAlign>
