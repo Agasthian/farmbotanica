@@ -12,7 +12,8 @@ export const Section = styled.section`
 `
 
 export const Wrapper = styled.div`
-  margin-top: 8rem;
+  margin-top: ${({ topmargin }) => (topmargin ? "11rem" : "8rem")};
+  margin-bottom: ${({ bottommargin }) => (bottommargin ? "6rem" : "0")};
 `
 export const Container = styled.div`
   max-width: 124rem;

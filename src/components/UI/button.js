@@ -7,13 +7,14 @@ const StyledButton = styled(animated.button)`
   border: none;
   outline: none;
   background: var(--primary);
-  color: var(--white);  
+  color: var(--white);
   font-family: Poppins;
-  font-size: 1.4rem;
-  font-weight:500;
-  word-spacing:2px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  word-spacing: 2px;
   border-radius: 10rem;
-  padding: 0.9rem 2rem;
+  padding: 0.8rem 2rem;
+  line-height: ${({ large }) => (large ? "3rem" : "2.4rem")};
   box-shadow: 0px 8px 15px var(--shadow-color);
   transition: all 0.2s ease-out;
 

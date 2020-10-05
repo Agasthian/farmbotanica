@@ -21,7 +21,10 @@ const CategorySection = () => {
   //query multiple images and frontmatter from mdx files
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fileAbsolutePath: { regex: "/content/category/" } }) {
+      allMdx(
+        limit: 5
+        filter: { fileAbsolutePath: { regex: "/content/category/" } }
+      ) {
         edges {
           node {
             id

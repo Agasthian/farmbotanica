@@ -24,7 +24,7 @@ const Content = styled.div`
 
 const MainHeading = styled(animated.h1)`
   color: var(--primary);
-  font-size: 6rem;
+  font-size: 6.75rem;
   margin: 0;
   font-weight: 700;
 `
@@ -89,7 +89,7 @@ const HomeLanding = () => {
                   Shipping Greens all over the Globe
                 </SubHeading>
                 <Link to="/category_page">
-                  <Button style={ButtonSpring}>
+                  <Button large style={ButtonSpring}>
                     View Product Category
                     <StyledIcon icon={faArrowCircleRight} size="1x" />
                   </Button>

@@ -13,10 +13,10 @@ const FlexWrapper = styled.div`
   justify-content: space-between;
 `
 const AboutImg = styled(Img)`
-  width: 50rem;
+  width: 75rem;
 `
 const AboutTextWrapper = styled.div`
-  width: 50rem;
+  width: 35rem;
 `
 
 const About = () => {
