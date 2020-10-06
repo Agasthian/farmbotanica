@@ -16,6 +16,13 @@ const StyledImage = styled.img`
   @media ${props => props.theme.mediaQueries.medium} {
     width: 45rem;
   }
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    width: 35rem;
+  }
+  @media ${props => props.theme.mediaQueries.micro} {
+    width: 30rem;
+  }
 `
 
 const BackgroundLogo = () => {

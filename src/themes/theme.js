@@ -13,8 +13,8 @@ export default {
     light2: "hsl(0,0%,99%)",
   },
   mediaQueries: {
-    micro: `only screen and (max-width:20em)`,
-    smallest: `only screen and (max-width: 25em)`,
+    micro: `only screen and (max-width:20em)`, // 20 *16 = 320px
+    smallest: `only screen and (max-width: 25em)`, // 25*16 = 400px
     smaller: "only screen and (max-width: 34.37em)", // 550px
     small: "only screen and (max-width: 48em)", //768px
     medium: "only screen and (max-width: 56.25em)", //900px

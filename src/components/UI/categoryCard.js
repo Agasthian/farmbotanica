@@ -8,6 +8,17 @@ import { SubHeadingH4 } from "../../themes/utils"
 const StyledImg = styled(BackgroundImage)`
   width: 20rem;
   height: 30rem;
+  box-shadow: 0rem 2rem 5rem var(--shadow-light);
+  border-radius: 7px;
+  overflow: hidden;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    width: 17rem;
+    height: 15rem;
+  }
+  @media ${props => props.theme.mediaQueries.micro} {
+    width: 13rem;
+  }
 `
 const BgOverlay = styled.div`
   height: 100%;
@@ -19,6 +30,7 @@ const BgOverlay = styled.div`
 
 const CategoryHeading = styled(SubHeadingH4)`
   color: #fff;
+  font-weight: 600;
   letter-spacing: 1px;
   background-color: var(--primary);
   text-align: center;

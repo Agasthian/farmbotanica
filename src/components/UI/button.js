@@ -18,6 +18,10 @@ const StyledButton = styled(animated.button)`
   box-shadow: 0px 8px 15px var(--shadow-color);
   transition: all 0.2s ease-out;
 
+  @media ${props => props.theme.mediaQueries.micro} {
+    font-size: 1.4rem;
+  }
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0px 15px 10px var(--shadow-btn);

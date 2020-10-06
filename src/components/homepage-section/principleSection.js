@@ -8,7 +8,11 @@ import { SubHeading, SubHeadingH4, SubHeadingH6 } from "../../themes/utils"
 
 const ImageWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  @media ${props => props.theme.mediaQueries.smaller} {
+    height: 66rem;
+  }
 `
 
 const StyledImage = styled(BackgroundImage)`
@@ -16,6 +20,11 @@ const StyledImage = styled(BackgroundImage)`
   width: 53rem;
   border-radius: 5px;
   overflow: hidden;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    height: 30rem;
+    width: 30rem;
+  }
 `
 
 const ImgContentWrapper = styled.div`
@@ -26,9 +35,13 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background: linear-gradient(rgba(97,118,127,0.0001) 0%, #084e3a5e 0%);
+background: linear-gradient(rgb(0 0 0) 0%,#02251bbf 0%);
 padding: 50px 70px;
 color: #fff;
+
+@media ${props => props.theme.mediaQueries.smaller} {
+  padding: 4rem 3rem;
+}
 }
 `
 
@@ -58,6 +71,10 @@ const ImgContentBlock = styled.div`
   position: absolute;
   bottom: 7rem;
   left: 7rem;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    left: 3rem;
+  }
 `
 
 const StyledH4 = styled(SubHeadingH4)`

@@ -24,16 +24,26 @@ const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: space-between;
-  height: 100vh;
+  height: 64rem;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    height: 80rem;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    margin: 0;
+  }
 `
 
 const Categorypage = () => {
   //query multiple images and frontmatter from mdx files
   const data = useStaticQuery(graphql`
     query {
-      allMdx(filter: { fileAbsolutePath: { regex: "/content/category/" } }) {
+      allMdx(
+        sort: { fields: [frontmatter___order], order: ASC }
+        filter: { fileAbsolutePath: { regex: "/content/category/" } }
+      ) {
         edges {
           node {
             id

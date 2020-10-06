@@ -8,13 +8,23 @@ import { SubHeading, CenterAlign } from "../../themes/utils"
 
 const CategoryWrapper = styled.div`
   margin-top: 8rem;
+
+  @media ${props => props.theme.mediaQueries.micro} {
+    margin-top: 2rem;
+  }
 `
 
 const CardWrapper = styled.div`
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    height: 50rem;
+    justify-content: space-around;
+  }
 `
 
 const CategorySection = () => {
@@ -23,6 +33,7 @@ const CategorySection = () => {
     query {
       allMdx(
         limit: 5
+        sort: { fields: [frontmatter___order], order: ASC }
         filter: { fileAbsolutePath: { regex: "/content/category/" } }
       ) {
         edges {

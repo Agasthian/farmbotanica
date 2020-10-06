@@ -15,11 +15,16 @@ const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 `
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    order: 2;
+  }
 `
 
 const MainHeading = styled(animated.h1)`
@@ -27,6 +32,13 @@ const MainHeading = styled(animated.h1)`
   font-size: 6.75rem;
   margin: 0;
   font-weight: 700;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    font-size: 5.5rem;
+  }
+  @media ${props => props.theme.mediaQueries.micro} {
+    font-size: 4.5rem;
+  }
 `
 
 const SubHeading = styled(animated.h2)`
@@ -34,6 +46,15 @@ const SubHeading = styled(animated.h2)`
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 4.2rem;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+  @media ${props => props.theme.mediaQueries.micro} {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
 `
 
 const StyledIcon = styled(FontAwesomeIcon)`
