@@ -1,6 +1,20 @@
 ---
-order: 8
+order: 7
 title: Bio-Degradable
-slug: biodegradables/biodegrade
+slug: /biodegradables/biodegrade
 image: 08-biodegradable.jpg
 ---
+
+import Head from "../../../components/head"
+import { Wrapper, Container } from "../../../components/layout/element"
+import Productlist from "../../../components/productlist/productlist"
+
+<Head title="Bio-degradable" />
+<Wrapper topmargin topmarginmobile>
+  <Container>
+    <Productlist
+      title={props.pageContext.frontmatter.title}
+      image={props.pageContext.frontmatter.image}
+    />
+  </Container>
+</Wrapper>

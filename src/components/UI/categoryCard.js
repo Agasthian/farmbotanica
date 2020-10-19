@@ -46,7 +46,7 @@ const CategoryCard = ({ cardinfo }) => {
   const { title, slug, image } = cardinfo.frontmatter
   return (
     <>
-      <StyledLink to={slug}>
+      <StyledLink to={slug} partiallyActive={true}>
         <StyledImg fluid={image.childImageSharp.fluid}>
           <BgOverlay>
             <CategoryHeading>{title}</CategoryHeading>

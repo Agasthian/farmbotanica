@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   margin-bottom: ${({ bottommargin }) => (bottommargin ? "6rem" : "0")};
 
   @media ${props => props.theme.mediaQueries.smaller} {
-    margin-top: 6rem;
+    margin-top: ${({ topmarginmobile }) => (topmarginmobile ? "11rem" : "6rem")};;
   }
   @media ${props => props.theme.mediaQueries.micro} {
     margin-top: 0;

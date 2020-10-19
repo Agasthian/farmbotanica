@@ -68,7 +68,7 @@ const Categorypage = () => {
       <Head title="Category Page" />
       <Layout>
         <Container>
-          <Wrapper topmargin bottommargin>
+          <Wrapper topmargin bottommargin topmarginmobile>
             <CategoryContent>
               <HeadingWrapper>
                 <Heading>Category</Heading>
