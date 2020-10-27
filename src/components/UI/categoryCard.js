@@ -6,8 +6,8 @@ import BackgroundImage from "gatsby-background-image"
 import { SubHeadingH4 } from "../../themes/utils"
 
 const StyledImg = styled(BackgroundImage)`
-  width: 20rem;
-  height: 30rem;
+  width:  20rem;
+  height: ${props => props.list ? '20rem' : '30rem'} ;
   box-shadow: 0rem 2rem 5rem var(--shadow-light);
   border-radius: 7px;
   overflow: hidden;
@@ -42,12 +42,14 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const CategoryCard = ({ cardinfo }) => {
+const CategoryCard = ({ cardinfo, list }) => {
+  
   const { title, slug, image } = cardinfo.frontmatter
+
   return (
     <>
       <StyledLink to={slug} partiallyActive={true}>
-        <StyledImg fluid={image.childImageSharp.fluid}>
+        <StyledImg list={list} fluid={image.childImageSharp.fluid}>
           <BgOverlay>
             <CategoryHeading>{title}</CategoryHeading>
           </BgOverlay>
