@@ -1,20 +1,6 @@
 ---
 order: 3
 title: Fresh Vegetables
-slug: /freshveg/veg
+slug: /category/veg
 image: 01-freshveg.jpg
 ---
-
-import Head from "../../../components/head"
-import { Wrapper, Container } from "../../../components/layout/element"
-import Productlist from "../../../components/productlist/productlist"
-
-<Head title="Fresh Veg" />
-<Wrapper>
-  <Container>
-    <Productlist
-      title={props.pageContext.frontmatter.title}
-      image={props.pageContext.frontmatter.image}
-    />
-  </Container>
-</Wrapper>

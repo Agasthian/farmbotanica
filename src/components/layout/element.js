@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 export const Section = styled.section`
   width: 100%;
@@ -29,3 +31,52 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 100%;
 `
+
+// Used in category/pages
+export const ProductListWrapper = styled.div`
+max-width: 120rem;
+`;
+export const ProductListHeadingWrapper = styled.div`
+display:flex;
+`;
+export const ProductListContent = styled.div`
+display:flex;
+flex-direction: column;
+flex: 0 0 35%;
+background-color: var(--navbar);
+padding: 3rem;
+`;
+export const ProductListHeading = styled.div`
+display:flex;
+flex-direction: column;
+height: 100%;
+align-items: center;
+justify-content: center;
+`
+
+export const ProductListHeadingH1 = styled.h1`
+margin:0;
+`;
+export const ProductListHeadingH3 = styled.h3`
+margin:1rem;
+`;
+export const ProductListHeadingP = styled.p`
+margin:0.5rem;
+`;
+
+export const ProductListImg = styled(Img)`
+height: 40rem;
+flex:1;
+`;
+
+export const ProductListBackLink = styled(Link)`
+font-family:Poppins;
+text-decoration:none;
+color:var(--text);
+font-weight:600;
+transition: color 0.2s ease-out 0s;
+
+&:hover{
+  color:var(--primary)
+}
+`;

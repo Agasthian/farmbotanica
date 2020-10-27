@@ -1,20 +1,6 @@
 ---
 order: 6
-title: Flower
-slug: /flower/flower
+title: Flowers
+slug: /category/flower
 image: 07-flower.jpg
 ---
-
-import Head from "../../../components/head"
-import { Wrapper, Container } from "../../../components/layout/element"
-import Productlist from "../../../components/productlist/productlist"
-
-<Head title="Flower" />
-<Wrapper topmargin>
-  <Container>
-    <Productlist
-      title={props.pageContext.frontmatter.title}
-      image={props.pageContext.frontmatter.image}
-    />
-  </Container>
-</Wrapper>
