@@ -1,13 +1,29 @@
 import React from 'react'
-
+import styled from 'styled-components'
 import { useStaticQuery,graphql } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons"
 
 import Head from "../../components/head"
 import Layout from "../../components/layout/layout"
-import { Wrapper, Container,ProductListWrapper,ProductListHeadingWrapper,ProductListContent,ProductListHeading,ProductListHeadingH1,ProductListHeadingH3,ProductListHeadingP,ProductListImg,ProductListBackLink } from "../../components/layout/element"
+import { Wrapper, Container } from "../../components/layout/element"
+import CategoryCard from '../../components/UI/categoryCard'
+import ProductListHead from '../../components/productlist/productlisthead'
 
+const ProductListCard = styled.div`
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+  
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    height: 105rem;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    margin: 0;
+  }
+`
 
 const Spice = () => {
   
@@ -30,11 +46,36 @@ const Spice = () => {
         }
       }
     }
+    products:allMdx(
+      sort: { fields: [frontmatter___order], order: ASC }
+      filter: { fileAbsolutePath: { regex: "/content/products/plantationcrop/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            slug
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   `)
 
  
-
+  const {title, image} = data.mdx.frontmatter 
+  const props = {
+    title : title,
+    image : image
+  }
   
   return (
     <>
@@ -42,23 +83,12 @@ const Spice = () => {
      <Layout>
         <Wrapper topmargin topmarginmobile>
           <Container>
-            <ProductListWrapper>
-              <ProductListHeadingWrapper>
-                <ProductListContent>
-                  <ProductListBackLink to='/category_page'>
-                  <FontAwesomeIcon icon={faArrowCircleLeft} size='1x'/>  Category
-                  </ProductListBackLink>
-                  <ProductListHeading>
-                  <ProductListHeadingH1>
-                    {data.mdx.frontmatter.title}
-                  </ProductListHeadingH1> 
-                  <ProductListHeadingH3>Product List</ProductListHeadingH3>
-                  <ProductListHeadingP>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facilis temporibus, amet repellat </ProductListHeadingP>
-                  </ProductListHeading>
-                </ProductListContent>
-                <ProductListImg fluid={data.mdx.frontmatter.image.childImageSharp.fluid}/>
-              </ProductListHeadingWrapper>
-            </ProductListWrapper>
+            <ProductListHead {...props}  />
+              <ProductListCard>
+                {data.products.edges.map(item =>(
+                <CategoryCard list key={item.node.id} cardinfo={item.node} />
+                ))}
+              </ProductListCard>
           </Container>
         </Wrapper> 
       </Layout>
