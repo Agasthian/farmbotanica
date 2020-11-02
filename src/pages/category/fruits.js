@@ -27,7 +27,7 @@ const ProductListCard = styled.div`
   }
 `
 
-const Spice = () => {
+const Fruits = () => {
   
   //GraphlQL
   const data = useStaticQuery(graphql`
@@ -98,7 +98,7 @@ const Spice = () => {
   )
 }
 
-export default Spice
+export default Fruits
 
 
 

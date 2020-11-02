@@ -5,6 +5,7 @@ import { useStaticQuery,graphql } from "gatsby"
 import Head from "../../components/head"
 import Layout from "../../components/layout/layout"
 import { Wrapper, Container } from "../../components/layout/element"
+import CategoryCard from '../../components/UI/categoryCard'
 import ProductListHead from '../../components/productlist/productlisthead'
 
 const ProductListCard = styled.div`
@@ -14,6 +15,8 @@ const ProductListCard = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-content: space-between;
+  height: 70rem;
+
   
 
   @media ${props => props.theme.mediaQueries.smaller} {
@@ -24,7 +27,7 @@ const ProductListCard = styled.div`
   }
 `
 
-const Spice = () => {
+const Flower = () => {
   
   //GraphlQL
   const data = useStaticQuery(graphql`
@@ -45,8 +48,29 @@ const Spice = () => {
         }
       }
     }
+    products:allMdx(
+      sort: { fields: [frontmatter___order], order: ASC }
+      filter: { fileAbsolutePath: { regex: "/content/products/flowers/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            slug
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
-  `)
+`)
 
   const {title, image} = data.mdx.frontmatter 
   const props = {
@@ -62,6 +86,11 @@ const Spice = () => {
         <Wrapper topmargin topmarginmobile>
           <Container>
             <ProductListHead {...props}  />
+            <ProductListCard>
+              {data.products.edges.map(item =>(
+              <CategoryCard list key={item.node.id} cardinfo={item.node} />
+              ))}
+          </ProductListCard>
           </Container>
         </Wrapper> 
       </Layout>
@@ -69,7 +98,7 @@ const Spice = () => {
   )
 }
 
-export default Spice
+export default Flower
 
 
 

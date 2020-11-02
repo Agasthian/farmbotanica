@@ -12,8 +12,9 @@ module.exports = {
     author: `Agasthian`,
     siteUrl: "https://www.farmbotanica.in/",
     social: {
-      skypeID: "farmbotanica",
+      skype: "farmbotanica",
       email: "support@farmbotanica.com",
+      twitter: "farmbotanica"
     },
   },
   plugins: [

@@ -1,10 +1,13 @@
+// #66BB6A
+// #28cc9e
+
 export default {
   fonts: {
     main: "Poppins, sans-serif",
     para: "Open Sans, sans-serif",
   },
   colors: {
-    main1: "#28cc9e",
+    main1: "#66BB6A",
     main2: "#196b69",
     dark1: "#212121",
     dark2: "#757575",
@@ -39,3 +42,5 @@ export default {
     shadow1: "0px 5px 20px rgba(30,30,31,0.5)",
   },
 }
+
+

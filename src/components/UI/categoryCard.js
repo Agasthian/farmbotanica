@@ -45,7 +45,8 @@ const StyledLink = styled(Link)`
 const CategoryCard = ({ cardinfo, list }) => {
   
   const { title, slug, image } = cardinfo.frontmatter
-
+  
+  
   return (
     <>
       <StyledLink to={slug} partiallyActive={true}>

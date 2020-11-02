@@ -15,7 +15,7 @@ const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
+  
 `
 const Content = styled.div`
   display: flex;
@@ -44,8 +44,9 @@ const MainHeading = styled(animated.h1)`
 const SubHeading = styled(animated.h2)`
   color: var(--secondary);
   font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 4.2rem;
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+  padding: 0 6rem 0 0;
 
   @media ${props => props.theme.mediaQueries.smaller} {
     font-size: 1.7rem;
@@ -107,7 +108,7 @@ const HomeLanding = () => {
                   Farm Botanica
                 </MainHeading>
                 <SubHeading style={SubHeadingSpring}>
-                  Shipping Greens all over the Globe
+                Botany being one of the top most valued sciences, we at Farm Botanica strive to encapsulate all that falls under the proud branch of Botany thereby justifying our brand name.
                 </SubHeading>
                 <Link to="/category_page">
                   <Button large style={ButtonSpring}>
