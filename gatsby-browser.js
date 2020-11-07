@@ -72,6 +72,7 @@ a:focus, a:hover {
 p{
   font-family: ${props => props.theme.fonts.para};
   font-size: 1.6rem;
+  font-weight:500;
   color:rgba(56, 60, 80, 0.6);
 }
 

@@ -47,13 +47,11 @@ const About = () => {
             alt="About Process"
           />
           <AboutTextWrapper>
-            <SubHeading>About Us</SubHeading>
+            <SubHeading>What does Farm Botanica do?</SubHeading>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
-              illum repellat ratione quos nisi magni dignissimos placeat enim
-              quasi tenetur, ducimus ab, explicabo incidunt aperiam id
-              laudantium ipsum voluptatibus voluptate.
-            </p>
+            Procure high quality agro products from our farms and farmers, belonging to their respective Crop Focused Cluster (CFC) of farming villages established across India.</p>
+
+            <p>Process, pack and distribute the products - defined by their superior quality in terms of freshness, appearance, size, texture and taste - to the domestic as well as International buyers.</p>
             <Link to="/about">
               <StyledButton>More</StyledButton>
             </Link>
