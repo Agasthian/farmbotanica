@@ -47,6 +47,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary: ${props => props.theme.colors.main2};
     --navbar: rgba(255, 255, 255, 0.95);
     --text: ${props => props.theme.colors.dark1};
+    --text-dark3: ${props => props.theme.colors.dark3};
     --light-text:${props => props.theme.colors.light1};
     --white: #fff;
     --shadow-btn: rgba(7, 49, 69, .1);

@@ -42,7 +42,7 @@ const MainHeading = styled(animated.h1)`
 `
 
 const SubHeading = styled(animated.h2)`
-  color: var(--secondary);
+  color: var(--primary);
   font-weight: 600;
   font-size: 1.6rem;
   margin-bottom: 3.2rem;

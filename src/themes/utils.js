@@ -17,8 +17,8 @@ export const CenterAlign = styled.div`
 
 // Sub Heading
 export const SubHeading = styled.h2`
-  font-size: 2.3rem;
-  color: var(--secondary);
+  font-size: 2.6rem;
+  color: var(--primary);
 `
 
 export const SubHeadingH4 = styled.h4`
@@ -28,6 +28,7 @@ export const SubHeadingH4 = styled.h4`
 export const SubHeadingH6 = styled.h6`
   color: var(--white);
 `
+
 
 export const StyledLink = styled(Link)`
 cursor: pointer;
@@ -43,23 +44,11 @@ transition: all 0.4s ease-out;
 `;
 
 export const StyledIcon = styled(FontAwesomeIcon)`
-  color: var(--lighter);
-  
+  color: var(--white);
   transition: color 0.2s ease-out;
 
   ${StyledLink}:hover & {
     color: var(--secondary);
   }
 
-  @media ${props => props.theme.mediaQueries.medium} {
-    font-size: 2rem;
-  }
-
-  @media ${props => props.theme.mediaQueries.small} {
-    font-size: 1.7rem;
-  }
-
-  @media ${props => props.theme.mediaQueries.smaller} {
-    font-size: 1.6rem;
-  }
 `

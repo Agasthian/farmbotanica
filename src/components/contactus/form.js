@@ -1,13 +1,22 @@
-
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 
-import { StyledLink } from "../../themes/utils"
+import Button from '../UI/button'
 
-const FormGroup = styled.div``
+
+const FormWrapper = styled.div`
+flex:1;
+padding: 1.5rem 3rem;
+`
+
+const FormGroup = styled.div`
+
+`
 
 const Label = styled.label`
-  font-family: "Neuton", serif;
+  font-family: Poppins;
   font-size: 1.6rem;
   font-weight: 400;
   display: block;
@@ -17,22 +26,31 @@ const Label = styled.label`
 `
 const Input = styled.input`
   height: 3rem;
-  border: none;
-  font-family: "Neuton", serif;
+  border:none;
+  border-bottom: 1px solid grey;
+  font-family: inherit;
   font-size: 1.4rem;
   width: 100%;
+  background-color:transparent;
+
 `
 const Textarea = styled.textarea`
   height: 5rem;
   border: none;
-  font-family: "Neuton", serif;
+  border-bottom: 1px solid grey;
+  font-family: inherit
   font-size: 1.4rem;
   width: 100%;
   margin-bottom: 2rem;
 `
 
+const StyledIcon = styled(FontAwesomeIcon)`
+  margin-left: 1rem;
+`
+
 const Form = () => {
   return (
+    <FormWrapper>
     <form
       name="contact"
       method="post"
@@ -55,8 +73,9 @@ const Form = () => {
         <Label for="message">Message</Label>
         <Textarea name="message" />
       </FormGroup>
-      <StyledLink>Send</StyledLink>
+      <Button>Send <StyledIcon icon={faPaperPlane} size="1x" /></Button>
     </form>
+    </FormWrapper>
   )
 }
 export default Form

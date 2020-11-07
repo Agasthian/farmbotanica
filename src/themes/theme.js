@@ -1,5 +1,7 @@
 // #66BB6A
+//#f8b400
 // #28cc9e
+//#196b69
 
 export default {
   fonts: {
@@ -8,7 +10,7 @@ export default {
   },
   colors: {
     main1: "#66BB6A",
-    main2: "#196b69",
+    main2: "#f8b400",
     dark1: "#212121",
     dark2: "#757575",
     dark3: "#BDBDBD",
