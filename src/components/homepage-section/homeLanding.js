@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import { useSpring, animated, config } from "react-spring"
 
@@ -9,12 +8,17 @@ import ScrollDown from "../UI/scrollDown"
 import { Section, Container, Wrapper } from "../layout/element"
 import BackgroundLogo from "../UI/backgroundLogo"
 import Button from "../UI/button"
+import {StyledIconButton} from '../../themes/utils'
 
 //wrap - flex box
 const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    flex-direction: column;
+  }
   
 `
 const Content = styled.div`
@@ -29,15 +33,15 @@ const Content = styled.div`
 
 const MainHeading = styled(animated.h1)`
   color: var(--primary);
-  font-size: 6.75rem;
+  font-size: 4.75rem;
   margin: 0;
   font-weight: 700;
 
   @media ${props => props.theme.mediaQueries.smaller} {
-    font-size: 5.5rem;
+    font-size: 4rem;
   }
   @media ${props => props.theme.mediaQueries.micro} {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 `
 
@@ -56,10 +60,6 @@ const SubHeading = styled(animated.h2)`
     font-size: 1.4rem;
     margin-bottom: 2rem;
   }
-`
-
-const StyledIcon = styled(FontAwesomeIcon)`
-  margin-left: 1rem;
 `
 
 const HomeLanding = () => {
@@ -105,7 +105,7 @@ const HomeLanding = () => {
             <FlexWrapper>
               <Content>
                 <MainHeading style={MainHeadingSpring}>
-                  Farm Botanica
+                What is Farm Botanica?
                 </MainHeading>
                 <SubHeading style={SubHeadingSpring}>
                 Botany being one of the top most valued sciences, we at Farm Botanica strive to encapsulate all that falls under the proud branch of Botany thereby justifying our brand name.
@@ -113,7 +113,7 @@ const HomeLanding = () => {
                 <Link to="/category_page">
                   <Button large style={ButtonSpring}>
                     View Product Category
-                    <StyledIcon icon={faArrowCircleRight} size="1x" />
+                    <StyledIconButton icon={faArrowCircleRight} size="1x" />
                   </Button>
                 </Link>
               </Content>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Head from "../components/head"
 import Layout from "../components/layout/layout"
-import { Container } from "../components/layout/element"
+import { Container,Wrapper } from "../components/layout/element"
 import AboutPane1 from '../components/aboutus/aboutpane1'
 import Aboutpane2 from '../components/aboutus/aboutpane2'
 import Aboutpane3 from '../components/aboutus/aboutpane3'
@@ -18,11 +18,13 @@ const AboutPage = () => {
     <PageBG>
       <Head title="About Us" />
       <Layout>
-        <AboutPane1/>
-        <Container style={{padding :"0 8rem"}}>
-          <Aboutpane2/>
-          <Aboutpane3/>
-          <Aboutpane4/>
+        <Container>
+          <Wrapper bottommargin  style={{marginTop: "10rem"}}>
+            <AboutPane1/>
+            <Aboutpane2/>
+            <Aboutpane3/>
+            <Aboutpane4/>
+          </Wrapper>
         </Container>
       </Layout>
     </PageBG>

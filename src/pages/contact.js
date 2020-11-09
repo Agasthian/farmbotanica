@@ -30,6 +30,14 @@ padding:2rem;
 border-radius:7px;
 box-shadow: 0rem 0px 8px var(--shadow-color);
 display:flex;
+flex-wrap: wrap;
+
+@media ${props => props.theme.mediaQueries.smaller} {
+  padding:1rem;
+}
+@media ${props => props.theme.mediaQueries.smallest} {
+  padding:0rem;
+}
 `;
 
 
@@ -40,7 +48,7 @@ const ContactPage = () => {
       <Head title="Contact us" />
       <Layout>
         <Container>
-          <Wrapper topmargin>
+          <Wrapper topmargin bottommargin topmarginmobile>
             <ContactHeading>
               <SubHeading>Contact Us</SubHeading>
               <ContactHeadingMsg>Any questions or remarks ? Write us a message!</ContactHeadingMsg>

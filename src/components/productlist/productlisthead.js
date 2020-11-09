@@ -25,7 +25,7 @@ import { ProductListWrapper,ProductListHeadingWrapper,ProductListContent,Product
 const ProductlistHead = ({title, image}) => {
   
   return (
-    <div>
+    <>
       <ProductListWrapper>
         <ProductListHeadingWrapper>
           <ProductListContent>
@@ -44,7 +44,7 @@ const ProductlistHead = ({title, image}) => {
         </ProductListHeadingWrapper>
       </ProductListWrapper>
  
-    </div>
+    </>
   )
 }
 

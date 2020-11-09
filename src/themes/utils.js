@@ -43,6 +43,7 @@ transition: all 0.4s ease-out;
 }
 `;
 
+//Icon used in About us page
 export const StyledIcon = styled(FontAwesomeIcon)`
   color: var(--white);
   transition: color 0.2s ease-out;
@@ -51,4 +52,8 @@ export const StyledIcon = styled(FontAwesomeIcon)`
     color: var(--secondary);
   }
 
+`
+// Icon used in Buttons
+export const StyledIconButton = styled(FontAwesomeIcon)`
+  margin-left: 1rem;
 `

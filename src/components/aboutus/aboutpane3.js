@@ -7,6 +7,7 @@ import {SubHeading,SubHeadingH4,StyledIcon} from '../../themes/utils'
 
 const BoxWrapper = styled.div`
 display:flex;
+flex-wrap:wrap;
 `;
 
 const BoxContent = styled.div`
@@ -24,6 +25,10 @@ const BoxContent = styled.div`
     transform: translateY(-7px);
     color: var(--primary);
     box-shadow: 0rem 1rem 2rem var(--shadow-light);
+  }
+
+  @media ${props => props.theme.mediaQueries.smallest} {
+    height:100%;
   }
 `
 

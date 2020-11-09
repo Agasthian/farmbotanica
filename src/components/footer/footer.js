@@ -22,13 +22,16 @@ const FooteritemsAll = styled.div`
 
   @media ${props => props.theme.mediaQueries.small} {
     flex-direction: column;
-    height: 50vh;
   }
 `
 const FooterItem = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 22rem;
+
+  @media ${props => props.theme.mediaQueries.small} {
+    min-height:15rem;
+  }
 `
 const FooterTextWrapper = styled.div`
   display: flex;

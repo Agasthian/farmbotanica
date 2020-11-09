@@ -3,9 +3,11 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
+
 import { Section, Container } from "../layout/element"
 import StyledButton from "../UI/button"
-import { SubHeading } from "../../themes/utils"
+import { SubHeading,StyledIconButton } from "../../themes/utils"
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -53,7 +55,9 @@ const About = () => {
 
             <p>Process, pack and distribute the products - defined by their superior quality in terms of freshness, appearance, size, texture and taste - to the domestic as well as International buyers.</p>
             <Link to="/about">
-              <StyledButton>More</StyledButton>
+              <StyledButton>
+                More <StyledIconButton icon={faArrowCircleRight} size="1x" />
+              </StyledButton>
             </Link>
           </AboutTextWrapper>
         </FlexWrapper>

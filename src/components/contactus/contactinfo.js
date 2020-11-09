@@ -15,6 +15,10 @@ const Wrapper = styled.div`
   padding:2rem 3rem;
   position:relative;
   overflow: hidden;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    flex: 0 0 100%;
+  }
 `;
 
 const Heading = styled.h3`
@@ -55,6 +59,12 @@ const OrangeCircle = styled.img`
   position: absolute;
   bottom: -11rem;
   right: -10rem;
+
+  @media ${props => props.theme.mediaQueries.smallest} {
+    width:25rem;
+    bottom: -17rem;
+    right: -16rem;
+  }
 `;
 
 const WhiteCircle = styled.img`
@@ -62,6 +72,13 @@ width: 11rem;
 position: absolute;
 bottom: 5rem;
 right: 7rem;
+
+@media ${props => props.theme.mediaQueries.smallest} {
+  width:5rem;
+  bottom: 2rem;
+    right: 2rem;
+}
+}
 `;
 
 const ContactInfo = () => {

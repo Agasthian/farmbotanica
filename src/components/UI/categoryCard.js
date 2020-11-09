@@ -8,7 +8,7 @@ import { SubHeadingH4 } from "../../themes/utils"
 const StyledImg = styled(BackgroundImage)`
   width:  20rem;
   height: ${props => props.list ? '20rem' : '30rem'} ;
-  box-shadow: 0rem 2rem 5rem var(--shadow-light);
+  box-shadow: 0rem 0.5rem 1rem var(--shadow-light);
   border-radius: 7px;
   overflow: hidden;
 

@@ -70,7 +70,7 @@ a:focus, a:hover {
   text-decoration: none;
   cursor: pointer;
 }
-p{
+p, ol{
   font-family: ${props => props.theme.fonts.para};
   font-size: 1.6rem;
   font-weight:500;

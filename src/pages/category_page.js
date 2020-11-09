@@ -29,10 +29,11 @@ const CardWrapper = styled.div`
   height: 64rem;
 
   @media ${props => props.theme.mediaQueries.smaller} {
-    height: 80rem;
+    
+    margin: 0;
   }
   @media ${props => props.theme.mediaQueries.smallest} {
-    margin: 0;
+    
   }
 `
 

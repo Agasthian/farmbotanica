@@ -30,6 +30,11 @@ export const Container = styled.div`
   padding: 0 4rem;
   margin: 0 auto;
   width: 100%;
+
+  @media ${props => props.theme.mediaQueries.smallest} {
+
+    padding: 0 3rem;
+  }
 `
 
 // Used in category/pages

@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 
 import Button from '../UI/button'
+import {StyledIconButton} from '../../themes/utils'
 
 
 const FormWrapper = styled.div`
@@ -44,9 +44,7 @@ const Textarea = styled.textarea`
   margin-bottom: 2rem;
 `
 
-const StyledIcon = styled(FontAwesomeIcon)`
-  margin-left: 1rem;
-`
+
 
 const Form = () => {
   return (
@@ -73,7 +71,7 @@ const Form = () => {
         <Label for="message">Message</Label>
         <Textarea name="message" />
       </FormGroup>
-      <Button>Send <StyledIcon icon={faPaperPlane} size="1x" /></Button>
+      <Button>Send <StyledIconButton icon={faPaperPlane} size="1x" /></Button>
     </form>
     </FormWrapper>
   )
