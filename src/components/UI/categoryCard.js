@@ -15,9 +15,11 @@ const StyledImg = styled(BackgroundImage)`
   @media ${props => props.theme.mediaQueries.smaller} {
     width: 17rem;
     height: 15rem;
+    margin-top: 2.5rem;
   }
   @media ${props => props.theme.mediaQueries.micro} {
     width: 13rem;
+    margin-top: 2rem;
   }
 `
 const BgOverlay = styled.div`

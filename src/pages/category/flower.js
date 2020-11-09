@@ -20,7 +20,7 @@ const ProductListCard = styled.div`
   
 
   @media ${props => props.theme.mediaQueries.smaller} {
-    height: 105rem;
+    height: 100%;
   }
   @media ${props => props.theme.mediaQueries.smallest} {
     margin: 0;
@@ -83,7 +83,7 @@ const Flower = () => {
     <>
      <Head title="Flower" />
      <Layout>
-        <Wrapper topmargin topmarginmobile>
+        <Wrapper topmargin topmarginmobile bottommargin>
           <Container>
             <ProductListHead {...props}  />
             <ProductListCard>
