@@ -21,6 +21,10 @@ const StyledLink = styled(Link)`
   &:hover {
     color: var(--primary);
   }
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    padding: 3rem 2rem;
+  }
 `
 
 const NavItems = ({ mobile }) => {

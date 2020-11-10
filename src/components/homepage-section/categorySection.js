@@ -6,6 +6,7 @@ import CategoryCard from "../UI/categoryCard"
 import { Section, Container } from "../layout/element"
 import { SubHeading, CenterAlign } from "../../themes/utils"
 
+
 const CategoryWrapper = styled.div`
   margin-top: 8rem;
 

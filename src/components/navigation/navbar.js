@@ -5,6 +5,7 @@ import { useSpring, animated, config } from "react-spring"
 import styled from "styled-components"
 
 import DesktopMenu from "./desktopMenu"
+import MobileMenu from './mobileMenu/mobileMenu'
 import { Container } from "../../themes/utils"
 
 /********CSS - Styled Component********/
@@ -38,6 +39,7 @@ const Navbar = () => {
   //State
   const [isMobile, setisMobile] = useState(null)
   const [isScroll, setisScroll] = useState(null)
+  const [menuOpened, setMenuOpened] = useState(false)
   //Animation
   const NavbarSpring = useSpring({
     config: config.stiff,
@@ -101,7 +103,10 @@ const Navbar = () => {
             <Link to='/'>
               <StyledLogo fluid={data.file.childImageSharp.fluid} alt='Farm Botanica Logo'/>
             </Link>
-            {isMobile ? <p>Test</p> : <DesktopMenu />}
+            {isMobile ? <MobileMenu 
+              menuOpened={menuOpened}
+              setMenuOpened={setMenuOpened}
+              /> : <DesktopMenu />}
           </Wrapper>
         </Container>
       </StyledHeader>
