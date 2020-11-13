@@ -20,9 +20,8 @@ const Label = styled.label`
   font-size: 1.6rem;
   font-weight: 400;
   display: block;
-  margin-top: 0.7rem;
+  margin: 0;
   transition: 0.3s all;
-  margin-bottom: 0.5em;
 `
 const Input = styled.input`
   height: 3rem;
@@ -32,8 +31,19 @@ const Input = styled.input`
   font-size: 1.4rem;
   width: 100%;
   background-color:transparent;
-
+  margin-bottom:2rem;
 `
+
+const InputCheckbox = styled.input`
+margin-bottom:2rem;
+margin-top:2rem;
+`
+
+const LabelCheckbox = styled.label`
+  display:inline;
+  margin-right:2rem;
+`
+
 const Textarea = styled.textarea`
   height: 5rem;
   border: none;
@@ -66,6 +76,13 @@ const Form = () => {
       <FormGroup>
         <Label for="email">E-mail</Label>
         <Input name="email" plaecholder="name@name.com" type="email" />
+      </FormGroup>
+      <FormGroup>
+        <Label>Type of Enquiry</Label>
+        <InputCheckbox type="checkbox" name='domestic1' value='domestic'/>
+        <LabelCheckbox for="domestic1"> Domestic</LabelCheckbox>
+        <InputCheckbox type="checkbox" name='international' value='international'/>
+        <LabelCheckbox for="international"> International</LabelCheckbox>
       </FormGroup>
       <FormGroup>
         <Label for="message">Message</Label>

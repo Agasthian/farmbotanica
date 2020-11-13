@@ -6,7 +6,7 @@ const StyledButton = styled(animated.button)`
   cursor: pointer;
   border: none;
   outline: none;
-  background: var(--secondary);
+  background: var(--primary);
   color: var(--white);
   font-family: Poppins;
   font-size: 1.5rem;

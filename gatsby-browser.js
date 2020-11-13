@@ -74,7 +74,7 @@ p, ol{
   font-family: ${props => props.theme.fonts.para};
   font-size: 1.6rem;
   font-weight:500;
-  color:rgba(56, 60, 80, 0.6);
+  color:rgba(56, 60, 80, 0.9);
 }
 
   h1,h2,h3,h4,h5{

@@ -18,7 +18,7 @@ export const CenterAlign = styled.div`
 // Sub Heading
 export const SubHeading = styled.h2`
   font-size: 2.6rem;
-  color: var(--primary);
+  color: var(--text);
 `
 
 export const SubHeadingH4 = styled.h4`

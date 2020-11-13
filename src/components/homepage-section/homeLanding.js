@@ -32,7 +32,7 @@ const Content = styled.div`
 `
 
 const MainHeading = styled(animated.h1)`
-  color: var(--primary);
+  color: var(--text);
   font-size: 4.75rem;
   margin: 0;
   font-weight: 700;
@@ -46,7 +46,7 @@ const MainHeading = styled(animated.h1)`
 `
 
 const SubHeading = styled(animated.h2)`
-  color: var(--primary);
+  color: var(--text);
   font-weight: 600;
   font-size: 1.6rem;
   margin-bottom: 3.2rem;
