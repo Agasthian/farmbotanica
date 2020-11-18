@@ -72,7 +72,7 @@ const FooterItemSocial = styled.div`
   }
 `
 
-const StyledIcon = styled(FontAwesomeIcon)`
+export const StyledIcon = styled(FontAwesomeIcon)`
   color: var(--lighter);
   font-size: 1.5rem;
   transition: color 0.2s ease-out;
@@ -107,7 +107,7 @@ transition: all 0.4s ease-out;
 }
 `;
 
-const StyledLinkOutter = styled.a`
+export const StyledLinkOutter = styled.a`
 cursor:pointer;
 color:var(--white);
 margin-right: 5px;

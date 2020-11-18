@@ -76,7 +76,7 @@ right: 7rem;
 @media ${props => props.theme.mediaQueries.smallest} {
   width:5rem;
   bottom: 2rem;
-    right: 2rem;
+  right: 2rem;
 }
 }
 `;

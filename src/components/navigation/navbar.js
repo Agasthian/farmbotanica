@@ -5,6 +5,7 @@ import { useSpring, animated, config } from "react-spring"
 import styled from "styled-components"
 
 import DesktopMenu from "./desktopMenu"
+import DesktopTopMenu from './desktopTopMenu'
 import MobileMenu from './mobileMenu/mobileMenu'
 import { Container } from "../../themes/utils"
 
@@ -13,7 +14,7 @@ const StyledHeader = styled(animated.header)`
   position: fixed;
   width: 100%;
   max-width: 100vw;
-  top: 0;
+  top:3.5rem;
   left: 0;
   z-index: 5;
   background-color: var(--navbar);
@@ -42,7 +43,7 @@ const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false)
   //Animation
   const NavbarSpring = useSpring({
-    config: config.stiff,
+    config: config.wobbly,
     opacity: 1,
     height: "10rem",
     from: {
@@ -97,6 +98,7 @@ const Navbar = () => {
 
   return (
     <>
+      <DesktopTopMenu/>
       <StyledHeader id="js-header" style={NavbarSpring}>
         <Container>
           <Wrapper>
