@@ -19,6 +19,10 @@ const StyledHeader = styled(animated.header)`
   z-index: 5;
   background-color: var(--navbar);
   box-shadow: 0 0.5rem 2rem var(--shadow-color);
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    top:0;
+  }
 `
 const Wrapper = styled.div`
   display: flex;

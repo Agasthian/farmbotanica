@@ -9,14 +9,23 @@ import { Container } from "../../themes/utils"
 import {StyledIcon,StyledLinkOutter} from '../footer/footer'
 
 const TopNavWrapper = styled.div`
-  height : 3.5rem;
+  height : 3.75rem;
   width:100%;
   background-color:var(--primary);
   position:fixed;
   top:0;
   z-index:6;
+  display: flex;
+  align-items: center;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+   display:none;
+  }
+`;
+
+const FlexWrapper = styled.div`
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -64,31 +73,33 @@ cursor: pointer;`
 
 const DesktopTopMenu = () => {
   return (
-  
     <TopNavWrapper>
-      <LeftContent>
-        <IconWrapper>
-          <StyledIcon icon={faEnvelope} />
-        </IconWrapper>
-        <Para>support@farmbotanica.com</Para>
-        <IconWrapper>
-          <StyledIcon icon={faSkype} />
-        </IconWrapper>
-        <Para>(+91) 73588 71283</Para>
-      </LeftContent>
-      
-      <RightContent>
-        <IconWrapper>
-          <StyledIcon icon={faPhoneVolume} />
-        </IconWrapper>
-        <Para>(+91) 73588 71283</Para>
-          <StyledLink to='/contact'>
-            <EnquiryBtn>Enquiry now
-            </EnquiryBtn>
-          </StyledLink>
-      </RightContent>
-    </TopNavWrapper>
-  
+    <Container>
+      <FlexWrapper>
+        <LeftContent>
+          <IconWrapper>
+            <StyledIcon icon={faEnvelope} />
+          </IconWrapper>
+          <Para>support@farmbotanica.com</Para>
+          <IconWrapper>
+            <StyledIcon icon={faSkype} />
+          </IconWrapper>
+          <Para>farmbotanica</Para>
+        </LeftContent>
+        
+        <RightContent>
+          <IconWrapper>
+            <StyledIcon icon={faPhoneVolume} />
+          </IconWrapper>
+          <Para>(+91) 73588 71283</Para>
+            <StyledLink to='/contact'>
+              <EnquiryBtn>Enquiry now
+              </EnquiryBtn>
+            </StyledLink>
+        </RightContent>
+      </FlexWrapper>
+    </Container>
+  </TopNavWrapper>
   )
 }
 
