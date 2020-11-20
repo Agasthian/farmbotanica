@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useStaticQuery,graphql } from "gatsby"
+import { useStaticQuery,graphql,Link } from "gatsby"
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 
 
+import CategoryCard from '../../components/UI/categoryCard'
+import Button from '../../components/UI/button'
 import Head from "../../components/head"
 import Layout from "../../components/layout/layout"
-import { Wrapper, Container} from "../../components/layout/element"
-import CategoryCard from '../../components/UI/categoryCard'
+import { Wrapper, Container } from "../../components/layout/element"
 import ProductListHead from '../../components/productlist/productlisthead'
+import {StyledIconButton,CenterAlign} from '../../themes/utils'
 
 const ProductListCard = styled.div`
   margin: 2rem;
@@ -90,6 +93,14 @@ const Biodegradables = () => {
               <CategoryCard list key={item.node.id} cardinfo={item.node} />
               ))}
             </ProductListCard>
+            <CenterAlign>
+              <Link to='/contact'> 
+                <Button large>
+                  Make an Enquiry 
+                  <StyledIconButton icon={faArrowCircleRight} size="1x" />
+                </Button>
+              </Link>
+            </CenterAlign>
           </Container>
         </Wrapper> 
       </Layout>
