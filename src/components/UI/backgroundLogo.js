@@ -1,7 +1,7 @@
 import React from "react"
 import { useSpring, animated } from "react-spring"
 
-import heroImg from "../../images/hero_img.svg"
+import heroImg from "../../images/hero_img5.png"
 import styled from "styled-components"
 
 const StyledImage = styled.img`

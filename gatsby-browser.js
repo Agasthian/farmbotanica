@@ -54,7 +54,6 @@ const GlobalStyles = createGlobalStyle`
     --shadow-color: rgba(0, 0, 0, 0.1);
     --shadow-light: rgba(0, 0, 0, 0.3);
     --shadow-dark: rgba(0, 0, 0, 0.5);
-    background-color: ${props => props.theme.colors.light1};
   }
    
 form,

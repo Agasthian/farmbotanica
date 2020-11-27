@@ -2,6 +2,8 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
+
+
 export const Section = styled.section`
   width: 100%;
   min-height: ${({ fullHeight }) => (fullHeight ? "100vh" : "auto")};
@@ -9,7 +11,9 @@ export const Section = styled.section`
   flex-direction: column;
   justify-content: ${({ center }) => (center ? "center" : "flex-start")};
   align-items: center;
+  
 `
+
 //Section min height
 //min-height: ${({ fullHeight }) =>
 //fullHeight ? "calc(var(--vh, 1vh) * 100)" : "auto"};

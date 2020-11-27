@@ -9,6 +9,16 @@ import { Section, Container, Wrapper } from "../layout/element"
 import BackgroundLogo from "../UI/backgroundLogo"
 import Button from "../UI/button"
 import {StyledIconButton} from '../../themes/utils'
+import BGimg from "../../images/Worldmap.png"
+
+//Landing BG
+
+const LandingBG = styled.div`
+
+background-image: url(${BGimg});
+width: 98vw;
+height: 100vh;
+`;
 
 //wrap - flex box
 const FlexWrapper = styled.div`
@@ -28,29 +38,31 @@ const Content = styled.div`
 
   @media ${props => props.theme.mediaQueries.smaller} {
     order: 2;
+    margin-top: 4rem;
   }
 `
 
 const MainHeading = styled(animated.h1)`
   color: var(--text);
-  font-size: 4.75rem;
+  font-size: 2.8rem;
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
+  margin:0 6.5rem 0 0;
 
   @media ${props => props.theme.mediaQueries.smaller} {
-    font-size: 4rem;
+    font-size: 2.4rem;
   }
   @media ${props => props.theme.mediaQueries.micro} {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 `
 
 const SubHeading = styled(animated.h2)`
+  font-family:Open sans;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.6rem;
-  margin-bottom: 3.2rem;
-  padding: 0 6rem 0 0;
+  margin: 2rem 9rem 2.2rem 0;
 
   @media ${props => props.theme.mediaQueries.smaller} {
     font-size: 1.7rem;
@@ -61,6 +73,8 @@ const SubHeading = styled(animated.h2)`
     margin-bottom: 2rem;
   }
 `
+
+
 
 const HomeLanding = () => {
   //Animation
@@ -99,30 +113,32 @@ const HomeLanding = () => {
 
   return (
     <>
-      <Section id="header" fullHeight center>
-        <Container>
-          <Wrapper>
-            <FlexWrapper>
-              <Content>
-                <MainHeading style={MainHeadingSpring}>
-                What is Farm Botanica?
-                </MainHeading>
-                <SubHeading style={SubHeadingSpring}>
-                Botany being one of the top most valued sciences, we at Farm Botanica strive to encapsulate all that falls under the proud branch of Botany thereby justifying our brand name.
-                </SubHeading>
-                <Link to="/category_page">
-                  <Button large style={ButtonSpring}>
-                    View Product Category
-                    <StyledIconButton icon={faArrowCircleRight} size="1x" />
-                  </Button>
-                </Link>
-              </Content>
-              <BackgroundLogo />
-            </FlexWrapper>
-          </Wrapper>
-          <ScrollDown />
-        </Container>
-      </Section>
+      <LandingBG>
+        <Section  id="header" fullHeight center>
+            <Container>
+              <Wrapper>
+                <FlexWrapper>
+                  <Content>
+                    <MainHeading style={MainHeadingSpring}>
+                    Bringing Fresh Produce to Domestic & International Markets.
+                    </MainHeading>
+                    <SubHeading style={SubHeadingSpring}>
+                    Farm Botanica strives to encapsulate all that falls under the proud branch of Botany thereby justifying our brand name.
+                    </SubHeading>
+                    <Link to="/category_page">
+                      <Button large style={ButtonSpring}>
+                        View Product Category
+                        <StyledIconButton icon={faArrowCircleRight} size="1x" />
+                      </Button>
+                    </Link>
+                  </Content>
+                  <BackgroundLogo />
+                </FlexWrapper>
+              </Wrapper>
+              <ScrollDown />
+            </Container>
+          </Section>
+      </LandingBG>
     </>
   )
 }

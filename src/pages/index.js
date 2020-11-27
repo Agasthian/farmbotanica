@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import Head from "../components/head"
 import HomeLanding from "../components/homepage-section/homeLanding"
-import About from "../components/homepage-section/aboutSection"
+import Whatwedo from "../components/homepage-section/whatwedo"
 import Category from "../components/homepage-section/categorySection"
 import Principles from "../components/homepage-section/principleSection"
 
@@ -13,7 +13,7 @@ const IndexPage = () => {
       <Layout>
         <Head title="Home" />
         <HomeLanding />
-        <About />
+        <Whatwedo />
         <Category />
         <Principles />
       </Layout>
