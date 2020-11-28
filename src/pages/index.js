@@ -6,6 +6,7 @@ import HomeLanding from "../components/homepage-section/homeLanding"
 import Whatwedo from "../components/homepage-section/whatwedo"
 import Category from "../components/homepage-section/categorySection"
 import Principles from "../components/homepage-section/principleSection"
+import Howwework from '../components/homepage-section/howWeWork'
 
 const IndexPage = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage = () => {
         <HomeLanding />
         <Whatwedo />
         <Category />
+        <Howwework/>
         <Principles />
       </Layout>
     </div>

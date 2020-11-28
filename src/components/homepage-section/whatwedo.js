@@ -1,8 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import styled from "styled-components"
-
 
 import { Section, Container, Wrapper } from "../layout/element"
 import { SubHeading,SubHeadingH3 } from "../../themes/utils"
@@ -69,18 +66,7 @@ font-weight:600;
 `
 
 const Whatwedo = () => {
-  //Querying img
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "Website_Image_OpenSans.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
+  
 
   return (
     <Section
