@@ -27,6 +27,10 @@ flex: 0 0 35%;
   flex: 0 0 80%;
   margin-bottom: 2rem;
 }
+@media ${props => props.theme.mediaQueries.medium} {
+  flex: 0 0 60%;
+  margin-bottom: 2rem;
+}
 `
 
 const ButtonWrapper = styled.div`
@@ -35,7 +39,6 @@ margin-top:1.5rem;
 `;
 
 const StyledImg = styled(Img)`
-box-shadow: 0rem 0.5rem 1rem var(--shadow-light);
 border-radius: 7px;
 overflow: hidden;
 `;

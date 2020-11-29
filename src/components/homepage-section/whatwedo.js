@@ -14,12 +14,21 @@ const LeftWrapper = styled.div`
   flex : 0 0 50%;
   padding: 0 1rem;
 
+  @media ${props => props.theme.mediaQueries.medium} {
+    flex: 0 0 80%;
+  }
   @media ${props => props.theme.mediaQueries.smaller} {
     flex:1;
   }
+  
 `
 const RightWrapper = styled.div`  
 flex : 1;
+
+@media ${props => props.theme.mediaQueries.medium} {
+  flex: 0 0 70%;
+  
+}
 `
 
 const SubHeadingh3 = styled(SubHeadingH3)`
