@@ -52,6 +52,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/content/products`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
