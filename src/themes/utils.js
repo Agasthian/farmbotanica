@@ -1,4 +1,4 @@
-import styled from "styled-components"
+       import styled from "styled-components"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -23,9 +23,7 @@ export const SubHeading = styled.h2`
 `
 
 export const SubHeadingH3 = styled.h3`
-  color:var(--text);
-
-  
+  color:var(--text); 
 `;
 
 export const SubHeadingH4 = styled.h4`

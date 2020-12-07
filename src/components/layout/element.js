@@ -19,7 +19,7 @@ export const Section = styled.section`
 //fullHeight ? "calc(var(--vh, 1vh) * 100)" : "auto"};
 
 export const Wrapper = styled.div`
-  margin-top: ${({ topmargin }) => (topmargin ? "14rem" : "8rem")};
+  margin-top: ${({ topmargin }) => (topmargin ? "16rem" : "8rem")};
   margin-bottom: ${({ bottommargin }) => (bottommargin ? "6rem" : "0")};
 
   @media ${props => props.theme.mediaQueries.smaller} {

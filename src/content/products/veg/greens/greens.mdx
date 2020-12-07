@@ -4,3 +4,36 @@ title: Greens
 slug: /veg/greens/greens/
 image: greens.jpg
 ---
+
+import Head from "../../../../components/head"
+import {
+  Container,
+  Wrapper,
+  ProductListBackLink,
+} from "../../../../components/layout/element"
+import { SubHeading, CenterAlign } from "../../../../themes/utils"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons"
+
+<Head title={props.pageContext.frontmatter.title} />
+<Container>
+  <Wrapper topmargin bottommargin topmarginmobile>
+    <ProductListBackLink to="/category/veg">
+      <FontAwesomeIcon icon={faArrowCircleLeft} size="1x" /> Fresh Vegetables
+    </ProductListBackLink>
+    <CenterAlign>
+      <SubHeading>
+        {props.pageContext.frontmatter.title} - Product Profile
+      </SubHeading>
+    </CenterAlign>
+
+
+
+  </Wrapper>
+</Container>
+
+| Tables        |      Are      |   Cool |
+| ------------- | :-----------: | -----: |
+| col 3 is      | right-aligned | \$1600 |
+| col 2 is      |   centered    |   \$12 |
+| zebra stripes |   are neat    |    \$1 |
