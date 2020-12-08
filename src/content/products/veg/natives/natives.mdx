@@ -3,6 +3,7 @@ order: 1
 title: Natives
 slug: /veg/natives/natives/
 image: natives.jpg
+cultivation: Organic/Conventional
 hscode: 08055000
 description: Fresh Vegetables are harvested from our crop clusters on a daily basis, processed and then distributed to domestic as well as international uyers. Our Supply chain is demand driven and helps in reducing the transit time from farm to table. This ensures freshness and reduces post-harvest loss.
 ---
@@ -10,12 +11,13 @@ description: Fresh Vegetables are harvested from our crop clusters on a daily ba
 import styled from "styled-components"
 import Head from "../../../../components/head"
 import { Container, Wrapper } from "../../../../components/layout/element"
-import Productpage from "../../../../components/productpage/productpage"
-import BGimg from "/ProductList.png"
+import Productinfopage from "../../../../components/productinfopage/productinfopage"
+import ProductList from "./ProductList.png"
+import FlowChart from "./flowchart-native.png"
 
 <Container>
   <Wrapper topmargin bottommargin topmarginmobile>
-    <Productpage title={props.pageContext.frontmatter.title} />
+    <Productinfopage title={props.pageContext.frontmatter.title} description={props.pageContext.frontmatter.description} cultivation={props.pageContext.frontmatter.cultivation} hscode={props.pageContext.frontmatter.hscode} />
 
 ### General Information
 
@@ -27,13 +29,11 @@ import BGimg from "/ProductList.png"
 
 ### Procurement and Processing of Vegetables:
 
-![alt](/flowchart-native.png)
-
-<BGimg />
+<img src={FlowChart} alt="product photo" />
 
 ### All Vegetables – At a glance
 
-![alt](/ProductList.png)
+<img src={ProductList} alt="product photo" />
 
   </Wrapper>
 </Container>
