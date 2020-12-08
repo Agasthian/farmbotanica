@@ -6,7 +6,7 @@ const StyledButton = styled(animated.button)`
   cursor: pointer;
   border: none;
   outline: none;
-  background: var(--primary);
+  background: ${({secondary}) => (secondary? "#f8b400": '#66BB6A' )};
   color: var(--white);
   font-family: Poppins;
   font-size: 1.5rem;

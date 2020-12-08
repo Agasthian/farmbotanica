@@ -3,37 +3,53 @@ order: 3
 title: Greens
 slug: /veg/greens/greens/
 image: greens.jpg
+category: Leafy Vegetables/Greens
+cultivation: Organic/Conventional
+hscode: 0709
+description: Fresh LeafyVegetables are harvested from our crop clusterson a daily basis, processed and then distributed to domestic as well as international buyers.Our Supply chain is demand driven and helps in reducing the transit time from farm to table. This ensures freshness and reduces post-harvest loss.
 ---
 
 import Head from "../../../../components/head"
+import { Container, Wrapper } from "../../../../components/layout/element"
+import Productinfopage from "../../../../components/productinfopage/productinfopage"
 import {
-  Container,
-  Wrapper,
-  ProductListBackLink,
-} from "../../../../components/layout/element"
-import { SubHeading, CenterAlign } from "../../../../themes/utils"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons"
+  FlowChartImg,
+  ProductImg,
+} from "../../../../components/productinfopage/productinfopage"
+import ProductList from "./ProductList.png"
+import FlowChart from "./flowchart-exotics.png"
 
 <Head title={props.pageContext.frontmatter.title} />
 <Container>
   <Wrapper topmargin bottommargin topmarginmobile>
-    <ProductListBackLink to="/category/veg">
-      <FontAwesomeIcon icon={faArrowCircleLeft} size="1x" /> Fresh Vegetables
-    </ProductListBackLink>
-    <CenterAlign>
-      <SubHeading>
-        {props.pageContext.frontmatter.title} - Product Profile
-      </SubHeading>
-    </CenterAlign>
+    <Productinfopage
+      title={props.pageContext.frontmatter.title}
+      description={props.pageContext.frontmatter.description}
+      cultivation={props.pageContext.frontmatter.cultivation}
+      hscode={props.pageContext.frontmatter.hscode}
+      category={props.pageContext.frontmatter.category}
+    />
 
+<br />
 
+### General Information
 
+| Specification | Value                            |
+| ------------- | -------------------------------- |
+| Origin        | Tamil Nadu, India                |
+| Maturity      | 90 – 95%                         |
+| Shelf Life    | 2 days at controlled temperature |
+
+<br />
+
+### Procurement and Processing of Vegetables:
+
+<FlowChartImg src={FlowChart} alt="product photo" />
+
+<br />
+
+### All Vegetables – At a glance
+
+<ProductImg src={ProductList} alt="product photo" />
   </Wrapper>
 </Container>
-
-| Tables        |      Are      |   Cool |
-| ------------- | :-----------: | -----: |
-| col 3 is      | right-aligned | \$1600 |
-| col 2 is      |   centered    |   \$12 |
-| zebra stripes |   are neat    |    \$1 |

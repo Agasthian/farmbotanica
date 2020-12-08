@@ -83,6 +83,8 @@ p, ol{
 
 table{
   border-collapse: collapse;
+  width: 100%;
+  text-align:center;
 }
 
  td,  th {
@@ -97,9 +99,10 @@ table{
  th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #4CAF50;
   color: white;
+  height:30px;
+  font-family:Poppins;
 }
 `
 

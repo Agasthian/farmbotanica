@@ -3,4 +3,58 @@ order: 4
 title: Onions
 slug: /veg/onions/onions/
 image: onions.jpg
+botanicalName: Allium Cepa L.
+family: Amaryllidaceae
+commercialpart: Bulb
+hscode: 07031010/20
+description: Fresh Indian Onions and Shallots areprocured directly from our crop clusters in the southern and northern states of India and then distributed in the domestic as well as international markets. The acquired produce is processed, sorted and graded using automated processing machines. The samples of the produce are then inspected to obtain phytosanitary and health certificates.
 ---
+
+import Head from "../../../../components/head"
+import { Container, Wrapper } from "../../../../components/layout/element"
+import Productinfopage from "../../../../components/productinfopage/productinfopage"
+import {
+  FlowChartImg,
+  ProductImg,
+} from "../../../../components/productinfopage/productinfopage"
+import ProductList from "./ProductList.png"
+import FlowChart from "./flowchart-exotics.png"
+
+<Head title={props.pageContext.frontmatter.title} />
+<Container>
+  <Wrapper topmargin bottommargin topmarginmobile>
+    <Productinfopage
+      title={props.pageContext.frontmatter.title}
+      description={props.pageContext.frontmatter.description}
+      hscode={props.pageContext.frontmatter.hscode}
+      category={props.pageContext.frontmatter.title}
+      botanicalname={props.pageContext.frontmatter.botanicalName}
+      commercialpart={props.pageContext.frontmatter.commercialpart}
+    />
+
+<br />
+
+### General Information
+
+| Specification       | Value                                                                                                                                             |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Available Varieties | **Bellary Onion, Nashik Onion Shallots or Small Onion**                                                                                           |
+| Origin              | India                                                                                                                                             |
+| Relative Humidity   | 90 – 95%                                                                                                                                          |
+| Shelf Life          | 2 days at controlled temperature                                                                                                                  |
+| Selection Criteria  | Fresh, clean, uniform, fully matured, well-developed bulbs, tightly closed neck and unexposed fleshy scales                                       |
+| Rejection Criteria  | Sprouted, deformed, soft spots, split necks, discoloured patches, insect infested, black mould(fungal), mechanically damaged rotted or foul smell |
+
+<br />
+
+### Procurement and Processing of Vegetables:
+
+<FlowChartImg src={FlowChart} alt="product photo" />
+
+<br />
+
+### All Vegetables – At a glance
+
+<ProductImg src={ProductList} alt="product photo" />
+  </Wrapper>
+</Container>

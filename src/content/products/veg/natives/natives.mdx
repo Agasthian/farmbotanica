@@ -3,21 +3,27 @@ order: 1
 title: Natives
 slug: /veg/natives/natives/
 image: natives.jpg
+category: Farm Fresh Vegetables
 cultivation: Organic/Conventional
 hscode: 08055000
 description: Fresh Vegetables are harvested from our crop clusters on a daily basis, processed and then distributed to domestic as well as international uyers. Our Supply chain is demand driven and helps in reducing the transit time from farm to table. This ensures freshness and reduces post-harvest loss.
 ---
 
-import styled from "styled-components"
 import Head from "../../../../components/head"
 import { Container, Wrapper } from "../../../../components/layout/element"
 import Productinfopage from "../../../../components/productinfopage/productinfopage"
+import {
+  FlowChartImg,
+  ProductImg,
+} from "../../../../components/productinfopage/productinfopage"
 import ProductList from "./ProductList.png"
 import FlowChart from "./flowchart-native.png"
 
 <Container>
   <Wrapper topmargin bottommargin topmarginmobile>
-    <Productinfopage title={props.pageContext.frontmatter.title} description={props.pageContext.frontmatter.description} cultivation={props.pageContext.frontmatter.cultivation} hscode={props.pageContext.frontmatter.hscode} />
+    <Productinfopage title={props.pageContext.frontmatter.title} description={props.pageContext.frontmatter.description} cultivation={props.pageContext.frontmatter.cultivation} hscode={props.pageContext.frontmatter.hscode} category={props.pageContext.frontmatter.category} />
+
+<br />
 
 ### General Information
 
@@ -27,13 +33,17 @@ import FlowChart from "./flowchart-native.png"
 | Maturity      | 90 – 95%                         |
 | Shelf Life    | 5 days at controlled temperature |
 
+<br />
+
 ### Procurement and Processing of Vegetables:
 
-<img src={FlowChart} alt="product photo" />
+<FlowChartImg src={FlowChart} alt="product photo" />
+
+<br />
 
 ### All Vegetables – At a glance
 
-<img src={ProductList} alt="product photo" />
+<ProductImg src={ProductList} alt="product photo" />
 
   </Wrapper>
 </Container>
