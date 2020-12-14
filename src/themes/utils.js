@@ -17,13 +17,15 @@ export const CenterAlign = styled.div`
 
 // Sub Heading
 export const SubHeading = styled.h2`
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-weight:600;
   color: var(--text);
 `
 
 export const SubHeadingH3 = styled.h3`
   color:var(--text); 
+  font-weight:400;
+  font-size:1.6rem;
 `;
 
 export const SubHeadingH4 = styled.h4`
@@ -34,6 +36,11 @@ export const SubHeadingH6 = styled.h6`
   color: var(--white);
 `
 
+//Used in Home page
+export const SpanGreen = styled.span`
+color:var(--primary);
+font-weight:bold;
+`;
 
 export const StyledLink = styled(Link)`
 cursor: pointer;

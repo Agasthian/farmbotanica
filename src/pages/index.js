@@ -19,7 +19,7 @@ const IndexPage = () => {
         <Category />
         <Howwework/>
         <WhyChooseUs/>
-        <Principles />
+        
       </Layout>
     </div>
   )

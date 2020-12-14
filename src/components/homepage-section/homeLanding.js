@@ -8,7 +8,7 @@ import ScrollDown from "../UI/scrollDown"
 import { Section, Container, Wrapper } from "../layout/element"
 import BackgroundLogo from "../UI/backgroundLogo"
 import Button from "../UI/button"
-import {StyledIconButton} from '../../themes/utils'
+import {StyledIconButton,SpanGreen} from '../../themes/utils'
 import BGimg from "../../images/Worldmap.png"
 
 //Landing BG
@@ -47,7 +47,7 @@ const MainHeading = styled(animated.h1)`
   font-size: 2.8rem;
   margin: 0;
   font-weight: 600;
-  margin:0 6.5rem 0 0;
+  margin: 0;
 
   @media ${props => props.theme.mediaQueries.smaller} {
     font-size: 2.4rem;
@@ -58,8 +58,8 @@ const MainHeading = styled(animated.h1)`
 `
 
 const SubHeading = styled(animated.h2)`
-  font-family:Open sans;
-  color: var(--text);
+  
+  
   font-weight: 500;
   font-size: 1.6rem;
   margin: 2rem 9rem 2.2rem 0;
@@ -73,7 +73,6 @@ const SubHeading = styled(animated.h2)`
     margin-bottom: 2rem;
   }
 `
-
 
 
 const HomeLanding = () => {
@@ -120,10 +119,10 @@ const HomeLanding = () => {
                 <FlexWrapper>
                   <Content>
                     <MainHeading style={MainHeadingSpring}>
-                    Bringing Fresh Produce to Domestic & International Markets.
+                    "Production & Marketing of <SpanGreen> Agriculture, Horticulture & Floriculture.</SpanGreen>"
                     </MainHeading>
                     <SubHeading style={SubHeadingSpring}>
-                    Farm Botanica strives to encapsulate all that falls under the proud branch of Botany thereby justifying our brand name.
+                    <SpanGreen style={{fontWeight: '600'}} >FARM BOTANICA</SpanGreen> strives to encapsulate all that falls under the proud branch of Botany thereby justifying our brand name.
                     </SubHeading>
                     <Link to="/category_page">
                       <Button large style={ButtonSpring}>

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Section, Container, Wrapper } from "../layout/element"
-import { SubHeading,SubHeadingH3 } from "../../themes/utils"
+import { SubHeading,SubHeadingH3,SpanGreen } from "../../themes/utils"
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const FlexWrapper = styled.div`
 `
 
 const LeftWrapper = styled.div`
-  flex : 0 0 50%;
+  flex : 0 0 60%;
   padding: 0 1rem;
 
   @media ${props => props.theme.mediaQueries.medium} {
@@ -27,25 +27,18 @@ flex : 1;
 
 @media ${props => props.theme.mediaQueries.medium} {
   flex: 0 0 70%;
-  
 }
 `
 
-const SubHeadingh3 = styled(SubHeadingH3)`
-  font-weight:400;
-  font-size:1.6rem;
-  width:80%;
-`
-
 const ParaWrapper = styled.div`
-  background-color:#F2F9FF;  
-  padding:2rem 4rem;
-  border-left: 8px solid #4B29B1;
+  background-color:#f3f3f3;  
+  padding:2rem 3rem;
+  border-left: 8px solid var(--primary);
   border-radius: 5px;
 `;
 
-const ItalicPara = styled.p`
-  font-style:italic;
+const Para = styled.p`
+  
   font-weight:500;
   letter-spacing:0.5px;
   color:#000;
@@ -53,6 +46,7 @@ const ItalicPara = styled.p`
 
 const RightNumbersWrapper = styled.div`
   padding:10rem 3rem 0 3rem;
+  color:var(--primary);
 
   @media ${props => props.theme.mediaQueries.smaller}{
     padding: 4rem 3rem 0 3rem;
@@ -70,8 +64,9 @@ font-weight: 600;
 margin:1rem 0;
 `
 const NumberText = styled.p`
-color:grey;
-font-weight:600;
+font-family:Poppins;
+color:var(--primary);
+font-weight:500;
 `
 
 const Whatwedo = () => {
@@ -88,13 +83,15 @@ const Whatwedo = () => {
         <FlexWrapper>
 
           <LeftWrapper>
-            <SubHeading>What we do</SubHeading>
-            <SubHeadingh3>The most important to a business is having Happy Clients. We give the best service.</SubHeadingh3>
+            <SubHeadingH3> What We Do </SubHeadingH3>
+            <SubHeading>" The most important to a business is having <SpanGreen>Happy Clients</SpanGreen>. We give the best service." </SubHeading>
             <ParaWrapper>
-              <ItalicPara>
-              Procure high quality agro products from our farms and farmers, belonging to their respective Crop Focused Cluster (CFC) of farming villages established across India.</ItalicPara>
+              <Para><SpanGreen>Grow & Harvest </SpanGreen> agricultural, horticultural, floricultural produce that comply with internationally agreed quality standards.
+              </Para>
+              <Para>
+              <SpanGreen>Procure</SpanGreen> the resulting high-quality produce from different Crop Focused Clusters (CFC) and aggregate in the respective processing facilities.</Para>
 
-              <ItalicPara>Process, pack and distribute the products - defined by their superior quality in terms of freshness, appearance, size, texture and taste - to the domestic as well as International buyers.</ItalicPara>
+              <Para><SpanGreen>Process, Pack and Distribute</SpanGreen> the products - defined by their superior quality in terms of freshness, appearance, size, texture and taste - to the domestic as well as International buyers.</Para>
             </ParaWrapper>
           </LeftWrapper>
 
