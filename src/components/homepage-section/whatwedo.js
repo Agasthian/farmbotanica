@@ -1,8 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 
 import { Section, Container, Wrapper } from "../layout/element"
-import { SubHeading,SubHeadingH3,SpanGreen } from "../../themes/utils"
+import { SubHeading,SubHeadingH3,SpanGreen,StyledIconButton,CenterAlign } from "../../themes/utils"
+import Button from '../UI/button'
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -84,7 +87,7 @@ const Whatwedo = () => {
 
           <LeftWrapper>
             <SubHeadingH3> What We Do </SubHeadingH3>
-            <SubHeading>" The most important to a business is having <SpanGreen>Happy Clients</SpanGreen>. We give the best service." </SubHeading>
+            <SubHeading>“The most important to a business is having <SpanGreen>Happy Clients</SpanGreen>. We give the best service”</SubHeading>
             <ParaWrapper>
               <Para><SpanGreen>Grow & Harvest </SpanGreen> agricultural, horticultural, floricultural produce that comply with internationally agreed quality standards.
               </Para>
@@ -119,6 +122,14 @@ const Whatwedo = () => {
                   <NumberText>Products Offered</NumberText>
                 </NumberContent>
               </NumberFlexWrapper>
+              <CenterAlign>
+                <Link to="/about">
+                  <Button>
+                    Infrastructure Insights
+                    <StyledIconButton icon={faArrowCircleRight} size="1x" />
+                  </Button>
+                </Link>
+              </CenterAlign>
             </RightNumbersWrapper>
           </RightWrapper>
         </FlexWrapper>

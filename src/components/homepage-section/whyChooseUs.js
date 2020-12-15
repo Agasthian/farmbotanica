@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import farmerImg from "../../images/farmer.svg"
 import { Section, Container, Wrapper } from "../layout/element"
-import { SubHeading,SubHeadingH3 } from "../../themes/utils"
+import { SubHeading,SubHeadingH3,SpanGreen } from "../../themes/utils"
 
 
 const SubHeadingh3 = styled(SubHeadingH3)`
@@ -57,8 +57,8 @@ const WhyChooseUs = () => {
           <FlexWrapper>
 
             <ImgWrapper>
-              <SubHeading>Why Choose us</SubHeading>
-              <SubHeadingh3>Doing the right thing at the right time.</SubHeadingh3>
+              <SubHeadingH3>Why Choose us  </SubHeadingH3>
+              <SubHeading>“Doing the <SpanGreen> right thing </SpanGreen> at the right time”</SubHeading>
               <StyledImg src={farmerImg}/>        
             </ImgWrapper>
 

@@ -16,10 +16,9 @@ const IndexPage = () => {
         <Head title="Home" />
         <HomeLanding />
         <Whatwedo />
-        <Category />
         <Howwework/>
         <WhyChooseUs/>
-        
+        <Category />
       </Layout>
     </div>
   )

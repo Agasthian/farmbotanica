@@ -6,7 +6,7 @@ import Head from "../components/head"
 import Layout from "../components/layout/layout"
 import { Container, Wrapper } from "../components/layout/element"
 import CategoryCard from "../components/UI/categoryCard"
-import { SubHeading } from "../themes/utils"
+import { SubHeading,SpanGreen } from "../themes/utils"
 
 const CategoryContent = styled.div``
 const HeadingWrapper = styled.div`
@@ -73,11 +73,9 @@ const Categorypage = () => {
             <CategoryContent>
               <HeadingWrapper>
                 <Heading>Category</Heading>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-                  perspiciatis earum ex cupiditate aperiam blanditiis eveniet
-                  rerum omnis officiis voluptatum asperiores dolores error,
-                  velit doloremque ut in. Voluptas, aliquam amet.
+                <p><SpanGreen> FARM BOTANICA </SpanGreen>has been truly successful in bringing a wide range of products under one roof through:</p>
+                <p style={{margin:"0"}}><SpanGreen>
+                  “The creation of state-wide agricultural value chain by establishing multiple crop focused clusters and assigning a processing infrastructure to each cluster”</SpanGreen>
                 </p>
               </HeadingWrapper>
               <CardWrapper>

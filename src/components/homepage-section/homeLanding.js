@@ -119,7 +119,7 @@ const HomeLanding = () => {
                 <FlexWrapper>
                   <Content>
                     <MainHeading style={MainHeadingSpring}>
-                    "Production & Marketing of <SpanGreen> Agriculture, Horticulture & Floriculture.</SpanGreen>"
+                    “Production & Marketing of <SpanGreen> Agriculture, Horticulture & Floriculture</SpanGreen>”
                     </MainHeading>
                     <SubHeading style={SubHeadingSpring}>
                     <SpanGreen style={{fontWeight: '600'}} >FARM BOTANICA</SpanGreen> strives to encapsulate all that falls under the proud branch of Botany thereby justifying our brand name.

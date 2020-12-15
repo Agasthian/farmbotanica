@@ -6,7 +6,7 @@ import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 
 import Button from "../UI/button"
 import { Section, Container, Wrapper } from "../layout/element"
-import { SubHeading,SubHeadingH3,StyledIconButton } from "../../themes/utils"
+import { SubHeading,SubHeadingH3,StyledIconButton,SpanGreen } from "../../themes/utils"
 
 const SubHeadingh3 = styled(SubHeadingH3)`
   font-weight:400;
@@ -22,6 +22,9 @@ justify-content:space-around;
 
 const ImageWrapper = styled.div`
 flex: 0 0 35%;
+border-radius: 7px;
+padding: 2rem;
+box-shadow: 0rem 0.5rem 1.5rem rgb(0 0 0 / 20%);
 
 @media ${props => props.theme.mediaQueries.smaller} {
   flex: 0 0 80%;
@@ -70,8 +73,8 @@ const Howwework = () => {
     <Section fullHeight topmargin>
       <Container>
         <Wrapper>
-          <SubHeading>How we work</SubHeading>
-          <SubHeadingh3>Our Approach diffrentiates us from others.</SubHeadingh3>
+          <SubHeadingH3>How we work</SubHeadingH3>
+          <SubHeading>“<SpanGreen>Our Approach </SpanGreen> diffrentiates us from others”</SubHeading>
             
           <FlexWrapper>
             <ImageWrapper>

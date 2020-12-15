@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import CategoryCard from "../UI/categoryCard"
 import { Section, Container } from "../layout/element"
-import { SubHeading, CenterAlign } from "../../themes/utils"
+import { SubHeading,SubHeadingH3,SpanGreen, CenterAlign } from "../../themes/utils"
 
 
 const CategoryWrapper = styled.div`
@@ -62,7 +62,10 @@ const CategorySection = () => {
       <Container>
         <CategoryWrapper>
           <CenterAlign>
-            <SubHeading>Product Category</SubHeading>
+            <SubHeading style={{margin:"0"}}>“We Bring the <SpanGreen>Best Products</SpanGreen> for you”</SubHeading>
+            </CenterAlign>
+            <CenterAlign>
+            <SubHeadingH3> Product Category</SubHeadingH3>
           </CenterAlign>
           <CardWrapper>
             {data.allMdx.edges.map(item => (
