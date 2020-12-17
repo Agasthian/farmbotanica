@@ -40,6 +40,8 @@ const Rice = () => {
     ){
       frontmatter{
         title
+        headingdesc    
+        quoteauthor            
         image {
           childImageSharp {
             fluid {
@@ -73,10 +75,12 @@ const Rice = () => {
   }
   `)
 
-  const {title, image} = data.mdx.frontmatter 
+  const {title, image,headingdesc,quoteauthor} = data.mdx.frontmatter 
   const props = {
     title : title,
-    image : image
+    image : image,
+    headingdesc : headingdesc,
+    quoteauthor:quoteauthor,
   }
 
   

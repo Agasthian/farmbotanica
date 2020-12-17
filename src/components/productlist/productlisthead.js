@@ -22,7 +22,7 @@ import { ProductListWrapper,ProductListHeadingWrapper,ProductListContent,Product
   // }
   // ` 
 
-const ProductlistHead = ({title, image}) => {
+const ProductlistHead = ({title, image,headingdesc,quoteauthor}) => {
   
   return (
     <>
@@ -37,7 +37,8 @@ const ProductlistHead = ({title, image}) => {
               {title}
             </ProductListHeadingH1> 
             <ProductListHeadingH3>Product List</ProductListHeadingH3>
-            <ProductListHeadingP>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facilis temporibus, amet repellat </ProductListHeadingP>
+            <ProductListHeadingP>{headingdesc} </ProductListHeadingP>
+            { !{quoteauthor} ? <p></p> : <p>-{quoteauthor}</p> }
             </ProductListHeading>
           </ProductListContent>
           <ProductListImg fluid={image.childImageSharp.fluid}/>

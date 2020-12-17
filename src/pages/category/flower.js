@@ -42,6 +42,8 @@ const Flower = () => {
     ){
       frontmatter{
         title
+        headingdesc
+        quoteauthor
         image {
           childImageSharp {
             fluid {
@@ -75,11 +77,13 @@ const Flower = () => {
   }
 `)
 
-  const {title, image} = data.mdx.frontmatter 
-  const props = {
-    title : title,
-    image : image
-  }
+const {title, image,headingdesc,quoteauthor} = data.mdx.frontmatter 
+const props = {
+  title : title,
+  image : image,
+  headingdesc : headingdesc,
+  quoteauthor : quoteauthor,
+}
 
   
   return (

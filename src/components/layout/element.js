@@ -71,6 +71,8 @@ margin:1rem;
 `;
 export const ProductListHeadingP = styled.p`
 margin:0.5rem;
+color:var(--primary);
+font-weight:700;
 `;
 
 export const ProductListImg = styled(Img)`
