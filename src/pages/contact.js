@@ -5,16 +5,11 @@ import Head from "../components/head"
 import Layout from "../components/layout/layout"
 import Form from '../components/contactus/form'
 import ContactInfo from '../components/contactus/contactinfo'
-import Map from '../components/map/map'
+
 import { Container, Wrapper } from "../components/layout/element"
 import {SubHeading,} from '../themes/utils'
 
-// Location Object passed as prop to Map Component
-const location = {
-  address: "Farm Botanica, Chennai.",
-  lat: 13.079792,
-  lng: 80.209609,
-}
+
 
 const ContactHeading = styled.div`
   text-align:center;
@@ -57,7 +52,7 @@ const ContactPage = () => {
               <ContactInfo/>
               <Form/>
             </ContactFormWrapper>
-            <Map  location={location} zoomLevel={18} />
+            
           </Wrapper>
         </Container>
       </Layout>

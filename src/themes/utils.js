@@ -1,4 +1,4 @@
-       import styled from "styled-components"
+import styled from "styled-components"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -9,13 +9,13 @@ export const Container = styled.div`
   width: 100%;
 `
 
-//Center Align Content
+/*********** Center Align Content ***********/
 export const CenterAlign = styled.div`
   display: flex;
   justify-content: center;
 `
 
-// Sub Heading
+/*********** Sub Heading ***********/
 export const SubHeading = styled.h2`
   font-size: 2.2rem;
   font-weight:600;
@@ -36,7 +36,7 @@ export const SubHeadingH6 = styled.h6`
   color: var(--white);
 `
 
-//Used in Home page
+/*********** Used in Home page ************/
 export const SpanGreen = styled.span`
 color:var(--primary);
 font-weight:bold;
@@ -55,9 +55,9 @@ transition: all 0.4s ease-out;
 }
 `;
 
-//Icon used in About us page
+/************ Icon used in About us page ************/
 export const StyledIcon = styled(FontAwesomeIcon)`
-  color: var(--white);
+  color: var(--primary);
   transition: color 0.2s ease-out;
 
   ${StyledLink}:hover & {
@@ -65,7 +65,15 @@ export const StyledIcon = styled(FontAwesomeIcon)`
   }
 
 `
-// Icon used in Buttons
+/************Icon used in Buttons*********/
 export const StyledIconButton = styled(FontAwesomeIcon)`
   margin-left: 1rem;
 `
+
+/******** Flex Box Template  **********/
+export const FlexWrapper = styled.div`
+  display:flex;
+  flex-wrap:wrap;
+`;
+export const FlexLeft = styled.div``;
+export const FlexRight = styled.div``;

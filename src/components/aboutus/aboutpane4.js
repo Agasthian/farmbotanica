@@ -6,7 +6,8 @@ import {SubHeading} from '../../themes/utils'
 const Aboutpane4 = () => {
   return (
     <>
-      <SubHeading>What sets Farm Botanica apart?</SubHeading>
+    {/**********  OPERATIONAL PROCEDURE ************/}
+      <SubHeading>Operational Procedure</SubHeading>
         <ol>
           <li>
               Multi-Layered Quality assessment and management <br/>

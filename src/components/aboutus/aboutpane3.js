@@ -1,101 +1,115 @@
 import React from 'react'
 import styled from 'styled-components'
-import { faTractor, faTruck } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTemperatureHigh,faSnowflake,faCogs, faRadiationAlt } from "@fortawesome/free-solid-svg-icons"
 
-import {SubHeading,SubHeadingH4,StyledIcon} from '../../themes/utils'
+import {SubHeading,SpanGreen} from '../../themes/utils'
 
 
-const BoxWrapper = styled.div`
+const FlexWrapper = styled.div`
 display:flex;
 flex-wrap:wrap;
+justify-content:space-between;
+margin:3rem 0;
 `;
 
-const BoxContent = styled.div`
-  height:35rem;
-  width:50rem;
-  background-color:var(--primary);
-  margin:2rem;
+
+const FlexContent = styled.div`
+  box-shadow: 0rem 0.5rem 1.5rem rgb(0 0 0 / 10%);
+  border-radius:7px;
+  width:35rem;
   padding:2rem;
-  border-radius:5px;
-  color:var(--white);
-  transition:all 0.3s ease-out;
-
-  &:hover{
-    background-color: var(--white);
-    transform: translateY(-7px);
-    color: var(--primary);
-    box-shadow: 0rem 1rem 2rem var(--shadow-light);
-  }
-
+  
+ 
   @media ${props => props.theme.mediaQueries.smallest} {
     height:100%;
   }
 `
 
-const IconWrap = styled.div`
-height:6rem;
-width:4em;
-border-radius:50%;
-background-color:var(--secondary);
-display:flex;
-justify-content:center;
-align-items: center;
-
-
-  ${BoxContent}:hover &{
-    background-color:var(--primary);
-    color:var(--white);
-  }
+const FlexContentSmall = styled.div`
+  width:20rem;
+  display:flex;
 `;
 
-const StyledH4 = styled(SubHeadingH4)`
-
-${BoxContent}:hover &{
-  color:var(--primary);
-}
+const FlexContentSmallH4 = styled.h4`
+  margin:0;
+  padding-left:1rem;
+  font-size:1.5rem;
 `;
 
-const StyledList = styled.li`
-  line-height: 2rem;
-  word-spacing: 4px;
-`;
+const StyledIcon = styled(FontAwesomeIcon)`
+  color: var(--primary);
+  font-size:3.75rem;
+  `
 
 const Aboutpane3 = () => {
   return (
     <>  
-      <SubHeading>How Farm Botanica work?</SubHeading>
-      <p>With the motto “Grow and Preserve”, our operations are segregated into two divisions – Farming & Supply Chain</p>
-      <BoxWrapper>
+    {/**********  OPERATIONAL INFRASTRUCTURE ************/}
+      <SubHeading style={{marginTop:"5rem"}}>Operational Infrastructure</SubHeading>
+      
+      <FlexWrapper>
 
-        <BoxContent>
-          <IconWrap>
-            <StyledIcon icon={faTractor} size='2x'/>
-          </IconWrap>
-          <StyledH4>
-            Farming
-          </StyledH4>
-          <ul>
-            <StyledList>Through the strategic relationship we share with the well-established Crop Focused Clusters (CFC), our farming division helps farms and farmers to focus completely in farming, and the result is high quality produce.</StyledList>
-            <StyledList></StyledList>
-            <StyledList></StyledList>
-          </ul>
-        </BoxContent>
+        <FlexContent>
+          <h4><SpanGreen>What’s Crop Focused Cluster (CFC)?</SpanGreen></h4>
+          <p>Multiple groups of Indian farming villages consitute each CFC, focusing on crops well suited to their respective climatic conditions.</p>
+        </FlexContent>
 
-        <BoxContent>
-          <IconWrap>
-            <StyledIcon icon={faTruck} size='2x'/>
-          </IconWrap>
-          <StyledH4>
-            Supply Chain
-          </StyledH4>
-          <ul>
-            <StyledList>That harvested commodities are alive with sustained chemical and respiration processes</StyledList>
-            <StyledList>That globally accepted quality and cleanliness is maintained </StyledList>
-            <StyledList></StyledList>
-          </ul>
-        </BoxContent>
+        <FlexContent>
+          <h4><SpanGreen>What is a Processing Centre (PC)?</SpanGreen></h4>
+          <p>Each CFC is assigned a Processing Centre – It has Handling Area, Quality Control, Cold Storage, APEDA Accredited Pack House & </p>
+        </FlexContent>
+        
+        <FlexContent>
+          <h4><SpanGreen>Handling Area</SpanGreen></h4>
+          <p>Equipped with high end modern machinery to process the produce and meet international standards in terms of Quality, Cleanliness & Freshness.</p>
+        </FlexContent>
 
-      </BoxWrapper>
+      </FlexWrapper>
+      <FlexWrapper>
+
+        <FlexContent>
+          <h4><SpanGreen>What’s Crop Focused Cluster (CFC)?</SpanGreen></h4>
+          <p>In-House quality lab to assess the quality of produce before and after processing. It ensures export quality standards.</p>
+        </FlexContent>
+
+        <FlexContent>
+          <h4><SpanGreen>Cold Storage</SpanGreen></h4>
+          <p>In-built unit to store the excess produce and reduce post-harvest loss.</p>
+        </FlexContent>
+
+        <FlexContent>
+          <h4><SpanGreen>Pack House</SpanGreen></h4>
+          <p>APEDA Accredited Unit for packaging, labelling and marking as per customer needs. Also complies with the international export standards.</p>
+        </FlexContent>
+
+      </FlexWrapper>
+
+      {/**********  INFRASTRUCTURE HIGHLIGHTS ************/}
+      <SubHeading style={{marginTop:"5rem"}}>Infrastructure Highlights </SubHeading>
+      <FlexWrapper>
+        <FlexContentSmall>
+          <StyledIcon icon={faTemperatureHigh}/> <FlexContentSmallH4> Vapour Heat Treatment Plant</FlexContentSmallH4>
+        </FlexContentSmall>
+
+        <FlexContentSmall>
+          <StyledIcon icon={faSnowflake}/> <FlexContentSmallH4>Individual Quick Freezing (IQF) Unit</FlexContentSmallH4>  
+        </FlexContentSmall>
+
+        <FlexContentSmall>
+        <StyledIcon icon={faRadiationAlt}/> <FlexContentSmallH4>Irradiation Unit with Gamma Radiation Tech</FlexContentSmallH4>
+        </FlexContentSmall>
+
+        <FlexContentSmall>
+        <StyledIcon icon={faCogs}/> <FlexContentSmallH4>Crop Specific Process Lines and Ripening Chambers</FlexContentSmallH4>
+        </FlexContentSmall>
+
+        <FlexContentSmall>
+        <StyledIcon icon={faTemperatureHigh}/> <FlexContentSmallH4>Vapour Heat Treatment Plant</FlexContentSmallH4>
+        </FlexContentSmall>
+
+      </FlexWrapper>
+
     </>
   )
 }
