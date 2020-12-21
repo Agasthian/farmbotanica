@@ -1,30 +1,116 @@
 import React from 'react'
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
-import {SubHeading} from '../../themes/utils'
+import {SubHeading,CenterAlign} from '../../themes/utils'
+
+
+const OPWrapper = styled.div`
+position:relative;
+margin-bottom:15rem;
+`;
+const StyledImg = styled(Img)`
+width:22rem;
+`;
+
+const OPContentBox = styled.div`
+width:27rem;
+`;
+
+const Content1 = styled.div`
+position:absolute;
+top: -5rem;
+left:22rem;
+`;
+const Content2 = styled.div`
+position:absolute;
+top: 0;
+left:70rem;
+`;
+const Content3 = styled.div`
+position:absolute;
+top: 7rem;
+left:22rem;
+`;
+const Content4 = styled.div`
+position:absolute;
+top:13rem;
+left:70rem;
+`;
+const Content5 = styled.div`
+position:absolute;
+top: 20rem;
+left: 22rem;
+`;
+const Content6 = styled.div`
+position:absolute;
+bottom :-7rem;
+left:70rem;
+`;
 
 const Aboutpane4 = () => {
+
+  /****** Query Wave image ******/
+  const data = useStaticQuery(graphql`
+  query {
+    fileName: file(relativePath: { eq: "wave1.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+  `);
+
   return (
     <>
     {/**********  OPERATIONAL PROCEDURE ************/}
-      <SubHeading>Operational Procedure</SubHeading>
-        <ol>
-          <li>
-              Multi-Layered Quality assessment and management <br/>
-              Products undergo quality checking before and after processing to assess the difference in quality. Another 	layer of quality inspection and quarantine check happens right before packaging.
-          </li>
-          <li>Handling Efficiency <br/>
-                We work with farmers, up and all the way until the products reach their shipment destinations. In order to 	conserve the natural resources, Farm Botanica strives hard to minimize post-harvest losses and wastage. 
-
-          </li>
-          <li>
-            Timely Delivery – <br/>Effective time management and swift delivery has always been our forte.	
-          </li>
-          <li>
-              Packaging – <br/> Quality packaging for safe transportation of goods, coupled with excellent cold chain for perishables.
-          </li>
-        </ol>
-
+      <SubHeading style={{marginBottom: "10rem"}}>Operational Procedure</SubHeading>
+      <OPWrapper>
+        <CenterAlign>
+          <StyledImg fluid={data.fileName.childImageSharp.fluid} />
+          
+            <Content1>
+              <OPContentBox>
+              <h4>1.	Purchase Order</h4>
+              <p>Finalize terms and conditions of trade to confirm the purchase order.</p>
+              </OPContentBox>
+            </Content1>
+            <Content2>
+              <OPContentBox>
+              <h4>2.	Purchase Order</h4>
+              <p>Finalize terms and conditions of trade to confirm the purchase order.</p>
+              </OPContentBox>
+            </Content2>
+            <Content3>
+              <OPContentBox>
+              <h4>3.	Purchase Order</h4>
+              <p>Finalize terms and conditions of trade to confirm the purchase order.</p>
+              </OPContentBox>
+            </Content3>
+            <Content4>
+              <OPContentBox>
+              <h4>4.	Purchase Order</h4>
+              <p>Finalize terms and conditions of trade to confirm the purchase order.</p>
+              </OPContentBox>
+            </Content4>
+            <Content5>
+              <OPContentBox>
+              <h4>5.	Purchase Order</h4>
+              <p>Finalize terms and conditions of trade to confirm the purchase order.</p>
+              </OPContentBox>
+            </Content5>
+            <Content6>
+              <OPContentBox>
+              <h4>6.	Purchase Order</h4>
+              <p>Finalize terms and conditions of trade to confirm the purchase order.</p>
+              </OPContentBox>
+            </Content6>
+            
+        </CenterAlign>
+      </OPWrapper>
     </>
   )
 }

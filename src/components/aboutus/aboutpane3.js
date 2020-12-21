@@ -69,7 +69,7 @@ const Aboutpane3 = () => {
       <FlexWrapper>
 
         <FlexContent>
-          <h4><SpanGreen>What’s Crop Focused Cluster (CFC)?</SpanGreen></h4>
+          <h4><SpanGreen>Quality Control</SpanGreen></h4>
           <p>In-House quality lab to assess the quality of produce before and after processing. It ensures export quality standards.</p>
         </FlexContent>
 
