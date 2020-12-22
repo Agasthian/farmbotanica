@@ -40,6 +40,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `productsub`,
+        path: `${__dirname}/src/content/productsub`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `category`,
         path: `${__dirname}/src/content/category`,
       },
