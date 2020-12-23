@@ -12,18 +12,15 @@ description: Fresh Vegetables are harvested from our crop clusters on a daily ba
 import Head from "../../../../components/head"
 import { Container, Wrapper } from "../../../../components/layout/element"
 import Productinfopage from "../../../../components/productinfopage/productinfopage"
-import {
-  FlowChartImg,
-  ProductImg,
-} from "../../../../components/productinfopage/productinfopage"
-
+import { FlowChartImg } from "../../../../components/productinfopage/productinfopage"
+import AvailabilityChart from "./Availablity-chart-1.png"
 import FlowChart from "./flowchart-native.png"
 import ProductlistSub from "./productlistSub.js"
 
 <Container>
   <Wrapper topmargin bottommargin topmarginmobile>
-    <Productinfopage title={props.pageContext.frontmatter.title} description={props.pageContext.frontmatter.description} cultivation={props.pageContext.frontmatter.cultivation} hscode={props.pageContext.frontmatter.hscode} category={props.pageContext.frontmatter.category} />
-
+    <Productinfopage title={props.pageContext.frontmatter.title} description={props.pageContext.frontmatter.description} cultivation={props.pageContext.frontmatter.cultivation} hscode={props.pageContext.frontmatter.hscode} category={props.pageContext.frontmatter.category} imgageprop={AvailabilityChart} />
+  
 <br />
 
 ### General Information
@@ -44,9 +41,7 @@ import ProductlistSub from "./productlistSub.js"
 
 ### All Vegetables – At a glance
 
-
-  <ProductlistSub />
-
+<ProductlistSub />
 
   </Wrapper>
 </Container>

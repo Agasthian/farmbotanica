@@ -80,7 +80,7 @@ const Howwework = () => {
             <ImageWrapper>
               <StyledImg fluid={data.image1.childImageSharp.fluid} alt="" />
               <ButtonWrapper>
-                <Link to="/about">
+                <Link to="/about/#operation_infra">
                   <Button>
                     Read more
                     <StyledIconButton icon={faArrowCircleRight} size="1x" />
@@ -92,7 +92,7 @@ const Howwework = () => {
             <ImageWrapper>
               <StyledImg fluid={data.image2.childImageSharp.fluid} alt="" />
               <ButtonWrapper>
-                <Link to="/about">
+                <Link to="/about/#operation_procedure">
                   <Button>
                     Read more
                     <StyledIconButton icon={faArrowCircleRight} size="1x" />

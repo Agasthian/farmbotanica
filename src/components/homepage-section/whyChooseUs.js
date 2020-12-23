@@ -6,10 +6,6 @@ import { Section, Container, Wrapper } from "../layout/element"
 import { SubHeading,SubHeadingH3,SpanGreen } from "../../themes/utils"
 
 
-const SubHeadingh3 = styled(SubHeadingH3)`
-  font-weight:400;
-  font-size:1.6rem;
-  `
 const StyledImg = styled.img`
   width: 35rem;
   @media ${props => props.theme.mediaQueries.medium} {
@@ -64,16 +60,16 @@ const WhyChooseUs = () => {
 
             <ContentWrapper>
               <ContentBox>
-                <ContentHeading>Multi-Layered Quality assessment and management</ContentHeading>
-                <ContentPara>Products undergo quality checking before and after processing to assess the difference in quality. Another 	layer of quality inspection and quarantine check happens right before packaging.</ContentPara>
+                <ContentHeading><SpanGreen> “Multi-Layered Quality Assessment and Management” </SpanGreen> </ContentHeading>
+                <ContentPara>QCs before and after processing to assess the difference in quality. Another layer of <b> “Quality Inspection” </b>and <b>“Quarantine Check” </b> happens right before packaging.</ContentPara>
               </ContentBox>
               <ContentBox>
-                <ContentHeading>Handling Efficiency</ContentHeading>
-                <ContentPara>We work with farmers, up and all the way until the products reach their shipment destinations. In order to 	conserve the natural resources, Farm Botanica strives hard to minimize post-harvest losses and wastage. </ContentPara>
+                <ContentHeading><SpanGreen>“Infrastructure and Process Capacity”</SpanGreen></ContentHeading>
+                <ContentPara>Equipped with high end facilities to <b> “Process Multiple Crops in Parallel” </b> at any given point in time and also capable of handling more than few <b>“100s of MTs per day”</b> </ContentPara>
               </ContentBox>
               <ContentBox>
-                <ContentHeading>Timely Delivery </ContentHeading>
-                <ContentPara>Effective time management and swift delivery has always been our forte.</ContentPara>
+                <ContentHeading><SpanGreen>“Safe Packaging & Timely Delivery” </SpanGreen> </ContentHeading>
+                <ContentPara>Quality packaging for safe transportation of goods, coupled with Excellent Cold Chain for perishables. <b> “Effective time management and swift delivery has always been our forte”</b> </ContentPara>
               </ContentBox>
             </ContentWrapper>
 

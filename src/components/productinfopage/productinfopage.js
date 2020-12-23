@@ -33,12 +33,32 @@ flex: 0 0 45%;
 border-right: 2px solid #ddd;
 `;
 
-const InfoTableRight = styled.div``;
+const InfoTableRight = styled.div`
+display:flex;
+flex-direction: column;`;
 
 const InfoTableRightHeading = styled.h4`
 color:var(--text);
+margin-bottom: 0.7rem;
 `;
 
+const InfoTableRightPara = styled.p`
+margin: 0.3rem 0;
+`;
+
+const GreenBox = styled.span`
+margin-left: 1rem;
+font-size: 14px;
+padding-left: 30px;
+background: var(--primary);
+`;
+
+const OrangeBox = styled.span`
+margin-left: 1rem;
+font-size: 14px;
+padding-left: 30px;
+background: var(--secondary);
+`;
 const DescriptionWrapper = styled.div`
   padding:15px;
 `;
@@ -48,20 +68,13 @@ const SpanHeader = styled.span`
   color:#4CAF50;
 `;
 
+const AvailabilityChartImg = styled.img`
+width:55rem;
+`
+
 /***********Css for images in the mdx files***********/
 export const FlowChartImg = styled.img`
-width: 100%
-
-@media ${props => props.theme.mediaQueries.medium} {
-  width: 45rem;
-}
-
-@media ${props => props.theme.mediaQueries.smaller} {
-  width: 35rem;
-}
-`;
-export const ProductImg = styled.img`
-width: 90%;
+width: 100rem;
 
 @media ${props => props.theme.mediaQueries.medium} {
   width: 45rem;
@@ -72,7 +85,8 @@ width: 90%;
 }
 `;
 
-const Productinfopage = ({title,description,cultivation,hscode, category,botanicalname,commercialpart}) => {
+
+const Productinfopage = ({title,description,cultivation,hscode, category,botanicalname,commercialpart,imgageprop}) => {
   //*********Method to display if props is available */ 
   const Cultivationmethod = () =>{
     return (
@@ -134,6 +148,9 @@ const Productinfopage = ({title,description,cultivation,hscode, category,botanic
               <InfoTableRightHeading>
                 Availability Calendar – Throughout the Year
               </InfoTableRightHeading>
+                <InfoTableRightPara>Peak Season <GreenBox/></InfoTableRightPara>
+                <InfoTableRightPara>Lean Season <OrangeBox/></InfoTableRightPara>
+                <AvailabilityChartImg src={imgageprop}/>
             </InfoTableRight>
           </InfoTableWrapper>
           <DescriptionWrapper>

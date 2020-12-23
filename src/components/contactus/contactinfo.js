@@ -94,7 +94,9 @@ const ContactInfo = () => {
           </AddLine>
           <AddLine>
             <IconWrap><StyledIcon icon={faPhoneAlt} size='1x'/></IconWrap>
-            <Para>(+91) 73588 71283</Para>
+            <Para>(+91) 73588 71283 <br/>
+                  (+91) 94451 19072
+            </Para>
           </AddLine>
           <AddLine>
             <IconWrap><StyledIcon icon={faMapMarkerAlt} size='1x'/></IconWrap>

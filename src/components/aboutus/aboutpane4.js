@@ -67,7 +67,7 @@ const Aboutpane4 = () => {
   return (
     <>
     {/**********  OPERATIONAL PROCEDURE ************/}
-      <SubHeading style={{marginBottom: "10rem"}}>Operational Procedure</SubHeading>
+      <SubHeading id="operation_procedure" style={{marginBottom: "10rem"}}>Operational Procedure</SubHeading>
       <OPWrapper>
         <CenterAlign>
           <StyledImg fluid={data.fileName.childImageSharp.fluid} />

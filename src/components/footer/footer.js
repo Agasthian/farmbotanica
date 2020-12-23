@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faPhoneVolume } from "@fortawesome/free-solid-svg-icons"
-import {faTwitter, faSkype } from "@fortawesome/free-brands-svg-icons"
+import {faTwitter, faSkype,faInstagram, faLinkedin,faFacebookF } from "@fortawesome/free-brands-svg-icons"
 
 import { Container } from '../layout/element'
 
@@ -66,7 +66,7 @@ const FooterText = styled.p`
 const FooterItemSocial = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 11vw;
+  width: 14vw;
   @media ${props => props.theme.mediaQueries.small} {
     width: 30vw;
   }
@@ -188,7 +188,7 @@ const Footer = () => {
               <StyledLinkOutter>
                 <StyledIcon icon={faPhoneVolume} />
               </StyledLinkOutter>{" "}
-              <FooterText> (+91) 73588 71283 </FooterText>
+              <FooterText> (+91) 73588 71283  <br/> (+91) 94451 19072</FooterText>
             </FooterTextWrapper>
           </FooterItem>
 
@@ -203,10 +203,29 @@ const Footer = () => {
                 </StyledLinkOutter>
 
                 <StyledLinkOutter  
-                href={`https://www.twitter.com/${site.siteMetadata.social.twitter}`}
+                href={`https://www.skype.com/${site.siteMetadata.social.skype}`}
                 target="_blank"
                 aria-label="" >
                   <StyledIcon icon={faSkype} />
+                </StyledLinkOutter>
+
+                <StyledLinkOutter  
+                href={`https://www.instagram.com/${site.siteMetadata.social.instagram}`}
+                target="_blank"
+                aria-label="" >
+                  <StyledIcon icon={faInstagram} />
+                </StyledLinkOutter>
+                <StyledLinkOutter  
+                href={`https://www.linkedin.com/company/${site.siteMetadata.social.linkedin}`}
+                target="_blank"
+                aria-label="" >
+                  <StyledIcon icon={faLinkedin} />
+                </StyledLinkOutter>
+                <StyledLinkOutter  
+                href={`https://www.facebook.com/${site.siteMetadata.social.facebook}`}
+                target="_blank"
+                aria-label="" >
+                  <StyledIcon icon={faFacebookF} />
                 </StyledLinkOutter>
               </FooterItemSocial>
           

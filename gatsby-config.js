@@ -14,7 +14,10 @@ module.exports = {
     social: {
       skype: "farmbotanica",
       email: "support@farmbotanica.com",
-      twitter: "farmbotanica"
+      twitter: "farm_botanica",
+      instagram: "farmbotanica",
+      facebook: "farmbotanica",
+      linkedin: "farm-botanica"
     },
   },
   plugins: [

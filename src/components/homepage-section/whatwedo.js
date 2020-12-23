@@ -123,7 +123,7 @@ const Whatwedo = () => {
                 </NumberContent>
               </NumberFlexWrapper>
               <CenterAlign>
-                <Link to="/about">
+                <Link to="/about/#infra_highlight">
                   <Button>
                     Infrastructure Insights
                     <StyledIconButton icon={faArrowCircleRight} size="1x" />

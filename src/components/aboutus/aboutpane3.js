@@ -46,7 +46,7 @@ const Aboutpane3 = () => {
   return (
     <>  
     {/**********  OPERATIONAL INFRASTRUCTURE ************/}
-      <SubHeading style={{marginTop:"5rem"}}>Operational Infrastructure</SubHeading>
+      <SubHeading id='operation_infra' style={{marginTop:"10rem"}}>Operational Infrastructure</SubHeading>
       
       <FlexWrapper>
 
@@ -86,7 +86,7 @@ const Aboutpane3 = () => {
       </FlexWrapper>
 
       {/**********  INFRASTRUCTURE HIGHLIGHTS ************/}
-      <SubHeading style={{marginTop:"5rem"}}>Infrastructure Highlights </SubHeading>
+      <SubHeading id="infra_highlight" style={{marginTop:"5rem"}}>Infrastructure Highlights </SubHeading>
       <FlexWrapper>
         <FlexContentSmall>
           <StyledIcon icon={faTemperatureHigh}/> <FlexContentSmallH4> Vapour Heat Treatment Plant</FlexContentSmallH4>
