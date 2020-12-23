@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { useStaticQuery,graphql,Link } from "gatsby"
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 
@@ -8,8 +9,24 @@ import Head from "../../components/head"
 import Layout from "../../components/layout/layout"
 import { Wrapper, Container } from "../../components/layout/element"
 import ProductListHead from '../../components/productlist/productlisthead'
-import {StyledIconButton,CenterAlign,ProductListCard} from '../../themes/utils'
+import {StyledIconButton,CenterAlign} from '../../themes/utils'
 
+const ProductListCard = styled.div`
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+  height: 25rem;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    height: 100%;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    margin: 0;
+  }
+`
 
 
 const Rice = () => {

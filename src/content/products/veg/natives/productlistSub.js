@@ -1,8 +1,25 @@
 import React from 'react'
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
 import CategoryCard from '../../../../components/UI/categoryCard'
-import { ProductListCard } from "../../../../themes/utils"
+
+export const ProductListCard = styled.div`
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+  height:200rem;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    height: 100%;
+  }
+  @media ${props => props.theme.mediaQueries.smallest} {
+    margin: 0;
+  }
+`
 
 const ProductlistSub = () => {
 

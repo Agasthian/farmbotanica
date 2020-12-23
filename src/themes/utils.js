@@ -78,20 +78,3 @@ export const FlexWrapper = styled.div`
 export const FlexLeft = styled.div``;
 export const FlexRight = styled.div``;
 
-/********** Product list card small Wrapper - used in all small card wrapper pages  **************/
-export const ProductListCard = styled.div`
-  margin: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: space-between;
-  height: 100rem;
-
-  @media ${props => props.theme.mediaQueries.smaller} {
-    height: 100%;
-  }
-  @media ${props => props.theme.mediaQueries.smallest} {
-    margin: 0;
-  }
-`
