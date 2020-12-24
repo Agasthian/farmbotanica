@@ -72,6 +72,19 @@ const FooterItemSocial = styled.div`
   }
 `
 
+const StyledLink = styled(Link)`
+cursor: pointer;
+color:var(--white);
+font-weight:500;
+text-decoration:none;
+transition: all 0.4s ease-out;
+
+&:hover {
+  color: ${ props => props.dark ? "var(--light-text)" : "var(--secondary)" };
+  border-bottom: ${ props => props.dark ? "3px solid var(--light-text)" : "3px solid var(--secondary)" }; 
+}
+`;
+
 export const StyledIcon = styled(FontAwesomeIcon)`
   color: var(--lighter);
   font-size: 1.5rem;
@@ -93,19 +106,6 @@ export const StyledIcon = styled(FontAwesomeIcon)`
     font-size: 1.6rem;
   }
 `
-
-const StyledLink = styled(Link)`
-cursor: pointer;
-color:var(--white);
-font-weight:500;
-text-decoration:none;
-transition: all 0.4s ease-out;
-
-&:hover {
-  color: ${ props => props.dark ? "var(--light-text)" : "var(--secondary)" };
-  border-bottom: ${ props => props.dark ? "3px solid var(--light-text)" : "3px solid var(--secondary)" }; 
-}
-`;
 
 export const StyledLinkOutter = styled.a`
 cursor:pointer;
@@ -147,6 +147,9 @@ const Footer = () => {
           skype
           email
           twitter
+          instagram
+          facebook
+          linkedin
         }
       }
     }
@@ -203,7 +206,7 @@ const Footer = () => {
                 </StyledLinkOutter>
 
                 <StyledLinkOutter  
-                href={`https://www.skype.com/${site.siteMetadata.social.skype}`}
+                href={`skype:${site.siteMetadata.social.skype}?chat`}
                 target="_blank"
                 aria-label="" >
                   <StyledIcon icon={faSkype} />

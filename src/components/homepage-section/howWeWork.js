@@ -8,11 +8,7 @@ import Button from "../UI/button"
 import { Section, Container, Wrapper } from "../layout/element"
 import { SubHeading,SubHeadingH3,StyledIconButton,SpanGreen } from "../../themes/utils"
 
-const SubHeadingh3 = styled(SubHeadingH3)`
-  font-weight:400;
-  font-size:1.6rem;
-  width:80%;
-`
+
 
 const FlexWrapper = styled.div`
 display:flex;

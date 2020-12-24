@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   transition: all 0.2s ease-out;
   user-select: none;
   height: ${({ isMobile }) => (isMobile ? "6rem" : "10rem")};
-  // height: ${({ isScroll }) => (isScroll ? "6rem" : "10rem")};
+//  height: ${({ isScroll }) => (isScroll ? "6rem" : "10rem")};
 `
 
 const StyledLogo = styled(Img)`
