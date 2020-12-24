@@ -6,7 +6,7 @@ import { faTemperatureHigh,faSnowflake,faCogs, faRadiationAlt } from "@fortaweso
 import {SubHeading,SpanGreen} from '../../themes/utils'
 
 
-const FlexWrapper = styled.div`
+export const FlexWrapper = styled.div`
 display:flex;
 flex-wrap:wrap;
 justify-content:space-between;
@@ -14,7 +14,7 @@ margin:3rem 0;
 `;
 
 
-const FlexContent = styled.div`
+export const FlexContent = styled.div`
   box-shadow: 0rem 0.5rem 1.5rem rgb(0 0 0 / 10%);
   border-radius:7px;
   width:35rem;
@@ -29,12 +29,20 @@ const FlexContent = styled.div`
 const FlexContentSmall = styled.div`
   width:20rem;
   display:flex;
+  @media ${props => props.theme.mediaQueries.smaller} {
+    width:100%;
+    margin:2rem 0;
+  }
 `;
 
 const FlexContentSmallH4 = styled.h4`
   margin:0;
   padding-left:1rem;
   font-size:1.5rem;
+
+  @media ${props => props.theme.mediaQueries.smaller} {
+    padding-left:2rem;
+  }
 `;
 
 const StyledIcon = styled(FontAwesomeIcon)`

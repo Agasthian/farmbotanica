@@ -70,7 +70,7 @@ const Howwework = () => {
       <Container>
         <Wrapper>
           <SubHeadingH3>How we work</SubHeadingH3>
-          <SubHeading>“<SpanGreen>Our Approach </SpanGreen> diffrentiates us from others”</SubHeading>
+          <SubHeading>“<SpanGreen>Our Approach </SpanGreen> differentiates us from others”</SubHeading>
             
           <FlexWrapper>
             <ImageWrapper>

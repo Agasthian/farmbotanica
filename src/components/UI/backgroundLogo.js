@@ -7,11 +7,14 @@ import styled from "styled-components"
 const StyledImage = styled.img`
   width: 60rem;
 
-  @media ${props => props.theme.mediaQueries.larger} {
-    width: 55rem;
-  }
   @media ${props => props.theme.mediaQueries.large} {
     width: 50rem;
+  }
+  @media ${props => props.theme.mediaQueries.larger} {
+    width: 65rem;
+  }
+  @media ${props => props.theme.mediaQueries.largest} {
+    width: 60rem;
   }
   @media ${props => props.theme.mediaQueries.medium} {
     width: 45rem;

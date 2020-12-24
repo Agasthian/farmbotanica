@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 export const Section = styled.section`
   width: 100%;
-  min-height: ${({ fullHeight }) => (fullHeight ? "100vh" : "auto")};
+  min-height: ${({ fullHeight }) => (fullHeight ? "65vh" : "auto")};
   display: flex;
   flex-direction: column;
   justify-content: ${({ center }) => (center ? "center" : "flex-start")};

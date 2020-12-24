@@ -24,8 +24,8 @@ export default {
     small: "only screen and (max-width: 48em)", //768px
     medium: "only screen and (max-width: 56.25em)", //900px
     large: "only screen and (max-width: 62.5em)", //1000px
-    larger: "only screen and (max-width: 80em)",
-    largest: "only screen and (max-width: 90em)",
+    larger: "only screen and (max-width: 80em)", //1600px
+    largest: "only screen and (max-width: 90em)", //1800px
   },
   spacings: {
     xxSmall: ".25em",

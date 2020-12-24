@@ -14,8 +14,9 @@ import BGimg from "../../images/Worldmap.png"
 //Landing BG
 
 const LandingBG = styled.div`
-
 background-image: url(${BGimg});
+background-size: cover;
+background-repeat: no-repeat;
 width: 98vw;
 height: 100vh;
 `;
@@ -113,7 +114,7 @@ const HomeLanding = () => {
   return (
     <>
       <LandingBG>
-        <Section  id="header" fullHeight center>
+        <Section  id="header" fullHeight center style={{minHeight:"100vh"}}>
             <Container>
               <Wrapper>
                 <FlexWrapper>

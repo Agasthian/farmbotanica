@@ -8,7 +8,8 @@ import { SubHeading,SubHeadingH3,SpanGreen, CenterAlign } from "../../themes/uti
 
 
 const CategoryWrapper = styled.div`
-  margin-top: 8rem;
+  margin: 8rem 0;
+  
 
   @media ${props => props.theme.mediaQueries.micro} {
     margin-top: 2rem;
