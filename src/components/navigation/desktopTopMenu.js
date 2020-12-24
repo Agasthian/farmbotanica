@@ -17,9 +17,9 @@ const TopNavWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  // @media ${props => props.theme.mediaQueries.smaller} {
-  //  display:none;
-  // }
+  @media ${props => props.theme.mediaQueries.smaller} {
+   display:none;
+  }
 `;
 
 const FlexWrapper = styled.div`
