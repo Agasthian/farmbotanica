@@ -31,6 +31,12 @@ const InfoTableWrapper = styled.div`
 const InfoTableLeft = styled.div`
 flex: 0 0 45%;
 border-right: 2px solid #ddd;
+
+@media ${props => props.theme.mediaQueries.smaller} {
+  flex: 0 0 95%;
+  border-right:none;
+}
+
 `;
 
 const InfoTableRight = styled.div`
@@ -70,6 +76,10 @@ const SpanHeader = styled.span`
 
 const AvailabilityChartImg = styled.img`
 width:55rem;
+
+@media ${props => props.theme.mediaQueries.smaller} {
+  width: 30rem;
+}
 `
 
 /***********Css for images in the mdx files***********/

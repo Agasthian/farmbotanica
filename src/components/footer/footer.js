@@ -68,7 +68,7 @@ const FooterItemSocial = styled.div`
   justify-content: space-evenly;
   width: 14vw;
   @media ${props => props.theme.mediaQueries.small} {
-    width: 30vw;
+    width: 55vw;
   }
 `
 
