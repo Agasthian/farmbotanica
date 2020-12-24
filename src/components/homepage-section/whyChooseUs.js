@@ -11,6 +11,9 @@ const StyledImg = styled.img`
   @media ${props => props.theme.mediaQueries.medium} {
     width:50rem;
   }
+  @media ${props => props.theme.mediaQueries.smaller} {
+   width:35rem;
+  }
 `;
 
 const FlexWrapper = styled.div`
@@ -26,8 +29,11 @@ flex: 1;
 
 @media ${props => props.theme.mediaQueries.medium} {
   flex: 0 0 70%;
-  
 }
+
+@media ${props => props.theme.mediaQueries.smaller} {
+  flex: 0 0 98%;
+ }
 `
 
 const ContentBox = styled.div`
