@@ -88,7 +88,7 @@ const Form = () => {
         <Label for="message">Message</Label>
         <Textarea name="message" />
       </FormGroup>
-      <Button type="submit">Send <StyledIconButton icon={faPaperPlane} size="1x" /></Button>
+      <Button>Send <StyledIconButton icon={faPaperPlane} size="1x" /></Button>
     </form>
     </FormWrapper>
   )
