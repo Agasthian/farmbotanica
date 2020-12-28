@@ -36,7 +36,7 @@ const Rice = () => {
   query{
     mdx(
       slug: {
-        regex:"/rice/indianrice/"
+        regex:"/ricecrop/indianrice/"
       }
     ){
       frontmatter{

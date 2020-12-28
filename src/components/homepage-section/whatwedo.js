@@ -31,6 +31,9 @@ flex : 1;
 @media ${props => props.theme.mediaQueries.medium} {
   flex: 0 0 70%;
 }
+@media ${props => props.theme.mediaQueries.smaller} {
+  flex: 0 0 98%;
+}
 `
 
 const ParaWrapper = styled.div`
