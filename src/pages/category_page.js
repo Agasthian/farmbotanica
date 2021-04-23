@@ -42,6 +42,7 @@ const Categorypage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
+        limit:6
         sort: { fields: [frontmatter___order], order: ASC }
         filter: { fileAbsolutePath: { regex: "/content/category/" } }
       ) {

@@ -60,22 +60,22 @@ const Form = () => {
   return (
     <FormWrapper>
     <form
-      name="contact"
+      name="contactus"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
       <FormGroup>
         <Label for="name">Name</Label>
-        <Input name="name" plaecholder="John doe" type="text" />
+        <Input name="name" placeholder="John doe" type="text" />
       </FormGroup>
       <FormGroup>
         <Label for="phone">Phone</Label>
-        <Input name="phone" plaecholder="98-xxxx-xxxx" type="text" />
+        <Input name="phone" placeholder="98-xxxx-xxxx" type="text" />
       </FormGroup>
       <FormGroup>
         <Label for="email">E-mail</Label>
-        <Input name="email" plaecholder="name@name.com" type="email" />
+        <Input name="email" placeholder="name@name.com" type="email" />
       </FormGroup>
       <FormGroup>
         <Label>Type of Enquiry</Label>
@@ -86,7 +86,9 @@ const Form = () => {
       </FormGroup>
       <FormGroup>
         <Label for="message">Message</Label>
-        <Textarea name="message" />
+        <Textarea name="message" rows='5' placeholder="A short message"/>
+      </FormGroup>
+      <FormGroup data-netlify-recaptcha="true">
       </FormGroup>
       <Button>Send <StyledIconButton icon={faPaperPlane} size="1x" /></Button>
     </form>

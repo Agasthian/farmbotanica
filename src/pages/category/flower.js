@@ -88,7 +88,7 @@ const props = {
   
   return (
     <>
-     <Head title="Flower" />
+     <Head title="Floriculture" />
      <Layout>
         <Wrapper topmargin topmarginmobile bottommargin>
           <Container>
